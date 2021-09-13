@@ -221,20 +221,20 @@
 
       
         <h2 id="3-4-价值函数"><a href="#3-4-价值函数" class="headerlink" title="3.4 价值函数"></a>3.4 价值函数</h2><p>状态价值函数 V_pi ( s_t ), 仅依赖于 s_t, 而 a_t, s_t+1, a_t+1,…都被期望消掉了</p>
-<p>动作价值函数 $Q(s<em>t, a_t)$, 仅依赖于 $s_t, a_t,$ 而 $s</em>{t+1}, a_{t+1}$,…都被期望消掉了</p>
-<p>最优动作价值函数 $Q<em>\star (s,a) = \max</em>\pi Q (s,a)$, 若 $Q_\star$ 已知, 给定当前状态 $s$, 策略为选择使 $Q_\star$ 最大的 $a$</p>
-<p>eg. $Q<em>\star(s, up) = 370, Q</em>\star(s, left) = -120, Q_\star(s, right) = 30$, 选 up.</p>
-<p>已知 $s<em>t, a_t$, 无论未来采取什么策略, 回报 $U_t = R_t + \gamma R</em>{t+1} + \gamma^2 R<em>{t+2} + …$ 的期望不可能超过 $Q</em>\star$</p>
+<p>动作价值函数 $Q(s_t, a_t)$, 仅依赖于 $s_t, a_t,$ 而 $s_{t+1}, a_{t+1}$,…都被期望消掉了</p>
+<p>最优动作价值函数 $Q_\star (s,a) = \max_\pi Q (s,a)$, 若 $Q_\star$ 已知, 给定当前状态 $s$, 策略为选择使 $Q_\star$ 最大的 $a$</p>
+<p>eg. $Q_\star(s, up) = 370, Q_\star(s, left) = -120, Q_\star(s, right) = 30$, 选 up.</p>
+<p>已知 $s_t, a_t$, 无论未来采取什么策略, 回报 $U_t = R_t + \gamma R_{t+1} + \gamma^2 R_{t+2} + …$ 的期望不可能超过 $Q_\star$</p>
 <p>DQN 学习出 $Q_\star$</p>
-<h1 id="4-DQN-与-Q学习"><a href="#4-DQN-与-Q学习" class="headerlink" title="4 DQN 与 Q学习"></a>4 DQN 与 Q学习</h1><p>$Q<em>\star(s_t, a_t) = \mathbb{E}</em>{s<em>{t+1} \sim p(\cdot | s_t, a_t)}\left[R_t + \gamma\max\limits</em>{a\in \mathcal{A}}Q<em>\star(s</em>{t+1}, a) \mid s_t, a_t\right]$</p>
+<h1 id="4-DQN-与-Q学习"><a href="#4-DQN-与-Q学习" class="headerlink" title="4 DQN 与 Q学习"></a>4 DQN 与 Q学习</h1><p>$Q_\star(s_t, a_t) = \mathbb{E}_{s_{t+1} \sim p(\cdot | s_t, a_t)}\left[R_t + \gamma\max\limits_{a\in \mathcal{A}}Q_\star(s_{t+1}, a) \mid s_t, a_t\right]$</p>
 <p>DQN 本质为对 $Q_\star$ 的函数近似</p>
 <p>状态空间可以无限, 动作空间需要有限.</p>
 <p>网络输入为状态 $s$, 输出每个动作的 $Q$ 值</p>
-<p>收集样本 $(s<em>t, a_t, r_t, s</em>{t+1})$ 反向更新网络参数 $w$</p>
+<p>收集样本 $(s_t, a_t, r_t, s_{t+1})$ 反向更新网络参数 $w$</p>
 <p>DQN 属于异策略 (off-policy): 用于收集经验的<strong>行为策略</strong>($\epsilon$ greedy)与控制 Agent 的<strong>目标策略</strong>不同</p>
 <p>SARSA 属于同策略 (on-policy)</p>
 <h1 id="5-Sarsa"><a href="#5-Sarsa" class="headerlink" title="5 Sarsa"></a>5 Sarsa</h1><p>用于训练评价策略 $Q_\pi$</p>
-<p>$Q<em>\pi(s_t, a_t) = \mathbb{E}</em>{s<em>{t+1},a</em>{t+1}}\left[R<em>t + \gamma Q</em>\pi(s<em>{t+1}, a</em>{t+1}) \mid s_t, a_t\right]$</p>
+<p>$Q_\pi(s_t, a_t) = \mathbb{E}_{s_{t+1},a_{t+1}}\left[R_t + \gamma Q_\pi(s_{t+1}, a_{t+1}) \mid s_t, a_t\right]$</p>
 <h1 id="6-价值学习高级技巧"><a href="#6-价值学习高级技巧" class="headerlink" title="6 价值学习高级技巧"></a>6 价值学习高级技巧</h1><h3 id="经验回放"><a href="#经验回放" class="headerlink" title="经验回放"></a>经验回放</h3><p>存储多个四元组反复训练网络, 只适用于异策略, 否则对于同策略, 存储的都是过时策略的四元组</p>
 <ul>
 <li>优先经验回放: 数组样本的TD误差越大, 抽取到该样本用于训练网络的概率越大 (少见 危险情况)</li>
@@ -250,52 +250,52 @@
 </ul>
 </li>
 </ul>
-<p>对决网络: $Q(s,a;w) = V(s;w^V) + D(s,a;w^D) - \max\limits<em>{a \in \mathcal{A}}D(s,a;w^D)$. 训练最优优势 $D</em>\star$ 与最优状态价值 $V<em>\star$ 两个网络从而近似 $Q</em>\star$</p>
+<p>对决网络: $Q(s,a;w) = V(s;w^V) + D(s,a;w^D) - \max\limits_{a \in \mathcal{A}}D(s,a;w^D)$. 训练最优优势 $D_\star$ 与最优状态价值 $V_\star$ 两个网络从而近似 $Q_\star$</p>
 <p>噪声网络: 参数 $w$ 的每个参数 $w_i = \mu_i + \sigma_i \cdot \xi_i$, 即 均值+标准差x噪声. 每做一次决策, 噪声需重新随机生成. 参数数量多一倍. 可以不用 $\epsilon-$greedy</p>
-<h1 id="7-策略梯度"><a href="#7-策略梯度" class="headerlink" title="7 策略梯度"></a>7 策略梯度</h1><p>$\max\limits<em>{\theta} J(\theta) = \mathbb{E}_s[V</em>\pi(s)]$</p>
+<h1 id="7-策略梯度"><a href="#7-策略梯度" class="headerlink" title="7 策略梯度"></a>7 策略梯度</h1><p>$\max\limits_{\theta} J(\theta) = \mathbb{E}_s[V_\pi(s)]$</p>
 <p>梯度上升</p>
-<p>$\nabla<em>\theta J(\theta)$ 的一个无偏估计为 $g(s,a;\theta) = Q</em>\pi(s,a) \cdot \nabla_\theta \ln \pi(a\mid s;\theta)$</p>
+<p>$\nabla_\theta J(\theta)$ 的一个无偏估计为 $g(s,a;\theta) = Q_\pi(s,a) \cdot \nabla_\theta \ln \pi(a\mid s;\theta)$</p>
 <p>$\theta \leftarrow \theta + \beta\cdot g(s,a;\theta)$​</p>
 <p>策略网络: 针对有限的动作空间, 输入状态 $s$, 输出各动作概率 $\pi(\cdot \mid s_t; \theta)$​</p>
-<h3 id="Reinforce"><a href="#Reinforce" class="headerlink" title="Reinforce"></a>Reinforce</h3><p>玩一盘游戏得到 $u<em>t = r_t + \gamma r</em>{t+1} + …$ 用其近似 $Q_\pi(s,a)$</p>
+<h3 id="Reinforce"><a href="#Reinforce" class="headerlink" title="Reinforce"></a>Reinforce</h3><p>玩一盘游戏得到 $u_t = r_t + \gamma r_{t+1} + …$ 用其近似 $Q_\pi(s,a)$</p>
 <p>同策略 (策略网络)</p>
 <h3 id="Actor-Critic"><a href="#Actor-Critic" class="headerlink" title="Actor-Critic"></a>Actor-Critic</h3><p>策略网络(Actor) + 价值网络(Critic)</p>
 <p>训练价值网络近似 $Q_\pi(s,a)$</p>
 <p>训练算法为 SARSA, 同策略</p>
 <p>也可以用目标网络 (价值网络) 缓解自举</p>
-<h1 id="8-带基线的策略梯度"><a href="#8-带基线的策略梯度" class="headerlink" title="8 带基线的策略梯度"></a>8 带基线的策略梯度</h1><h3 id="Reinforce-1"><a href="#Reinforce-1" class="headerlink" title="Reinforce"></a>Reinforce</h3><p>$g<em>b(s,a;\theta) = [ Q</em>\pi(s,a) - b ] \cdot \nabla_\theta \ln \pi(a\mid s;\theta)$ </p>
-<p>只要 $b$ 不依赖与动作 $A$, $g<em>b(s,a;\theta)$ 依然是 $\nabla</em>\theta J(\theta)$ 的一个无偏估计</p>
-<p>可令 $b = V<em>\pi(s)$, 新建价值网络近似 $V</em>\pi(s)$</p>
-<p>Reinforce $u<em>t$​ 近似 $Q</em>\pi(s,a)$​, 同时基于 $u_t$​​ 更新价值网络的参数</p>
+<h1 id="8-带基线的策略梯度"><a href="#8-带基线的策略梯度" class="headerlink" title="8 带基线的策略梯度"></a>8 带基线的策略梯度</h1><h3 id="Reinforce-1"><a href="#Reinforce-1" class="headerlink" title="Reinforce"></a>Reinforce</h3><p>$g_b(s,a;\theta) = [ Q_\pi(s,a) - b ] \cdot \nabla_\theta \ln \pi(a\mid s;\theta)$ </p>
+<p>只要 $b$ 不依赖与动作 $A$, $g_b(s,a;\theta)$ 依然是 $\nabla_\theta J(\theta)$ 的一个无偏估计</p>
+<p>可令 $b = V_\pi(s)$, 新建价值网络近似 $V_\pi(s)$</p>
+<p>Reinforce $u_t$​ 近似 $Q_\pi(s,a)$​, 同时基于 $u_t$​​ 更新价值网络的参数</p>
 <hr>
-<h3 id="Advantage-Actor-Critic-A2C"><a href="#Advantage-Actor-Critic-A2C" class="headerlink" title="Advantage Actor-Critic (A2C)"></a>Advantage Actor-Critic (A2C)</h3><p>恰好 $Q<em>\pi(s,a) - V</em>\pi(s)$​ 为优势函数​ Advantage Function</p>
+<h3 id="Advantage-Actor-Critic-A2C"><a href="#Advantage-Actor-Critic-A2C" class="headerlink" title="Advantage Actor-Critic (A2C)"></a>Advantage Actor-Critic (A2C)</h3><p>恰好 $Q_\pi(s,a) - V_\pi(s)$​ 为优势函数​ Advantage Function</p>
 <p>策略网络与价值网络的结构与带基线的 Reinforce 相同, 训练方法不同.</p>
 <p>训练价值网络:</p>
 <ul>
-<li><p>基于 Bellman 方程 $V<em>\pi(s_t) = \mathbb{E}</em>{A<em>t,S_t} [R_t + \gamma \cdot V</em>\pi(S_{t+1})]$</p>
+<li><p>基于 Bellman 方程 $V_\pi(s_t) = \mathbb{E}_{A_t,S_t} [R_t + \gamma \cdot V_\pi(S_{t+1})]$</p>
 </li>
-<li><p>TD 目标为 $r<em>t + \gamma \cdot V(s</em>{t+1};w)$​</p>
+<li><p>TD 目标为 $r_t + \gamma \cdot V(s_{t+1};w)$​</p>
 </li>
 </ul>
 <p>训练策略网络:</p>
 <ul>
-<li>$g(s<em>t,a_t;\theta) = [ r_t + \gamma \cdot V(s</em>{t+1};w) - V(s<em>{t};w) ] \cdot \nabla</em>\theta \ln \pi(a\mid s;\theta)$​</li>
+<li>$g(s_t,a_t;\theta) = [ r_t + \gamma \cdot V(s_{t+1};w) - V(s_{t};w) ] \cdot \nabla_\theta \ln \pi(a\mid s;\theta)$​</li>
 </ul>
 <p>同策略 (策略网络)</p>
 <h1 id="9-策略学习高级技巧"><a href="#9-策略学习高级技巧" class="headerlink" title="9 策略学习高级技巧"></a>9 策略学习高级技巧</h1><h3 id="TRPO"><a href="#TRPO" class="headerlink" title="TRPO"></a>TRPO</h3><p>Trust Region Policy Optimization 置信域策略优化</p>
-<p>置信域 $\mathcal{N}(\theta<em>{now})$: $\theta</em>{now}$​ 的一个邻域, 在这个邻域内的 $\theta$​, 函数 $L(\theta \mid \theta<em>{now})$ 很接近 $J(\theta)$​.<br>$J(\theta) = \mathbb{E}_S [V</em>\pi(S)]$</p>
-<p>$ = \mathbb{E}<em>S [\sum\limits</em>{a\in \mathcal{A}} \pi(a\mid S;\theta)Q_\pi(S,a)]$​</p>
-<p>$= \mathbb{E}<em>S [\sum\limits</em>{a\in \mathcal{A}} \pi(a\mid S;\theta<em>{now})\frac{\pi(a\mid s;\theta)}{\pi(a\mid S;\theta</em>{now})}Q_\pi(S,a)]$​​</p>
-<p>$= \mathbb{E}<em>S [\mathbb{E}</em>{A \sim \pi(\cdot \mid S; \theta<em>{now})} [\frac{\pi(A\mid S;\theta)}{\pi(A\mid s;\theta</em>{now})}Q_\pi(S,A)]]$​</p>
+<p>置信域 $\mathcal{N}(\theta_{now})$: $\theta_{now}$​ 的一个邻域, 在这个邻域内的 $\theta$​, 函数 $L(\theta \mid \theta_{now})$ 很接近 $J(\theta)$​.<br>$J(\theta) = \mathbb{E}_S [V_\pi(S)]$</p>
+<p>$ = \mathbb{E}_S [\sum\limits_{a\in \mathcal{A}} \pi(a\mid S;\theta)Q_\pi(S,a)]$​</p>
+<p>$= \mathbb{E}_S [\sum\limits_{a\in \mathcal{A}} \pi(a\mid S;\theta_{now})\frac{\pi(a\mid s;\theta)}{\pi(a\mid S;\theta_{now})}Q_\pi(S,a)]$​​</p>
+<p>$= \mathbb{E}_S [\mathbb{E}_{A \sim \pi(\cdot \mid S; \theta_{now})} [\frac{\pi(A\mid S;\theta)}{\pi(A\mid s;\theta_{now})}Q_\pi(S,A)]]$​</p>
 <ol>
-<li><p>做近似<br> 由轨迹蒙特卡洛<br> $L(\theta \mid \theta<em>{now}) = \frac{1}{n} \sum\limits</em>{t=1}^n \frac{\pi(a<em>t\mid s_t;\theta)}{\pi(a_t\mid s_t;\theta</em>{now})} \cdot u_t$</p>
+<li><p>做近似<br> 由轨迹蒙特卡洛<br> $L(\theta \mid \theta_{now}) = \frac{1}{n} \sum\limits_{t=1}^n \frac{\pi(a_t\mid s_t;\theta)}{\pi(a_t\mid s_t;\theta_{now})} \cdot u_t$</p>
 </li>
 <li><p>最大化</p>
-<p>$\max<em>\theta L(\theta \mid \theta</em>{now}); \textsf{st} ~\theta \in \mathcal{N}(\theta_{now})$</p>
+<p>$\max_\theta L(\theta \mid \theta_{now}); \textsf{st} ~\theta \in \mathcal{N}(\theta_{now})$</p>
 <p>用球或 KL 散度($\pi$​ 的接近程度) 决定邻域</p>
 </li>
 </ol>
-<h3 id="熵正则-Entropy-Regularization"><a href="#熵正则-Entropy-Regularization" class="headerlink" title="熵正则 Entropy Regularization"></a>熵正则 Entropy Regularization</h3><p>对概率分布 $p = [p<em>1,…,p_n]$, Entropy$(p) = -\sum\limits</em>{i=1}^n p_i\ln p_i$</p>
+<h3 id="熵正则-Entropy-Regularization"><a href="#熵正则-Entropy-Regularization" class="headerlink" title="熵正则 Entropy Regularization"></a>熵正则 Entropy Regularization</h3><p>对概率分布 $p = [p_1,…,p_n]$, Entropy$(p) = -\sum\limits_{i=1}^n p_i\ln p_i$</p>
 <p>增大熵以增强策略的随机性(探索能力), 作为正则项加入目标函数</p>
 <p>定义 $H(s;\theta) = \textsf{Entropy}(\pi(\cdot\mid s;\theta)) = -\sum\limits_{a \in \mathcal{A}} \pi(a \mid s;\theta)\ln \pi(a\mid s;\theta)$</p>
 <p>$\max_{\theta} ~j(\theta) + \lambda\mathbb{E}_S[H(S;\theta)]$</p>
@@ -307,7 +307,7 @@
 <p>异策略 行为策略为旧策略网络+噪声</p>
 <p>价值网络打分 $q(s, \mu(s;\theta); w)$</p>
 <p>$\max_{\theta} J(\theta) = \mathbb{E}[q(s, \mu(s;\theta); w)]$</p>
-<p>$g<em>j = \nabla</em>{\theta} q(s, \mu(s;\theta);w) = \nabla<em>{\theta} \mu(s;\theta)\cdot\nabla</em>{\mu(s;\theta)}(q(s, \mu(s;\theta);w))$</p>
+<p>$g_j = \nabla_{\theta} q(s, \mu(s;\theta);w) = \nabla_{\theta} \mu(s;\theta)\cdot\nabla_{\mu(s;\theta)}(q(s, \mu(s;\theta);w))$</p>
 <p>梯度上升训练策略网络</p>
 <p>TD 算法训练价值网络</p>
 <h5 id="双延时确定策略梯度-TD3"><a href="#双延时确定策略梯度-TD3" class="headerlink" title="双延时确定策略梯度 TD3"></a>双延时确定策略梯度 TD3</h5><p>缓解最大化与自举问题                                                                                                                                                                                                                                                                                                                                                                                                                                             </p>
@@ -325,15 +325,15 @@
 <p>构造均值网络 $\mu(s;\theta)$​ 与方差对数 ($\ln \sigma^2$​) 网络 $\rho (s;\theta)$$\pi(a \mid s ; \theta) = \Pi_{i=1}^d \frac{1}{\sqrt{2\pi} \exp[\rho_i(s;\theta)]} \cdot \exp(-\frac{[a_i - \mu_i(s;\theta)]^2}{2\exp[\rho_i(s;\theta)]})$​</p>
 <p>实际中定义辅助网络 $f(s,a;\theta) = -\frac{1}{2}\sum\limits_{i=1}^d(\rho_i(s;\theta) + \frac{[a_i - \mu_i(s;\theta)]^2}{\exp[\rho_i(s;\theta)]})$</p>
 <p>$f(s,a;\theta) = \ln\pi(a\mid s; \theta) + \textsf{constant}$</p>
-<p>策略梯度 $g = Q<em>\pi(s,a) \nabla</em>{\theta} \ln\pi(a \mid s;\theta) = Q<em>\pi(s,a) \nabla</em>{\theta} f(s,a;\theta)$</p>
+<p>策略梯度 $g = Q_\pi(s,a) \nabla_{\theta} \ln\pi(a \mid s;\theta) = Q_\pi(s,a) \nabla_{\theta} f(s,a;\theta)$</p>
 <p>用 Reinforce with baseline, A2C 近似 $Q_\pi(s,a)$</p>
 <h1 id="十一-对状态的不完全观测"><a href="#十一-对状态的不完全观测" class="headerlink" title="十一 对状态的不完全观测"></a>十一 对状态的不完全观测</h1><p>$\pi(a \mid s ; \theta) \rightarrow \pi(a \mid o_{1:t} ; \theta)$</p>
 <p>t 可变, 即网络的输入形状可变, 不能直接使用卷积层/全连接层.</p>
 <p>循环神经网络 RNN Recurrent NN, 把一个序列映射到一个特征向量</p>
 <p>$(x_1,…,x_i) \rightarrow h_i, h_i(i=1,…,n)$ 的维度都相同, 且 $h_i$ 包含 $x_1,…,x_i$ 的所有信息, 也即最后只需保留 $h_n$​, 作为传统输入送给神经网络.​</p>
-<p>$h<em>t = \tanh (W[h</em>{t-1};x_t]+b)$, 矩阵 $W$, 向量 $b$​ 为 RNN 的参数.​</p>
+<p>$h_t = \tanh (W[h_{t-1};x_t]+b)$, 矩阵 $W$, 向量 $b$​ 为 RNN 的参数.​</p>
 <p>当 RNN 作为策略网络, 只需将 $h_t$ 作为全连接网络的输入, 输出 $|\mathcal{A}|$ 维的动作概率向量.</p>
-<p>类似搭建 DQN $Q(o<em>{1:t}, a_t; w)$ 与价值网络 $q(o</em>{1:t}, a_t; w)$</p>
+<p>类似搭建 DQN $Q(o_{1:t}, a_t; w)$ 与价值网络 $q(o_{1:t}, a_t; w)$</p>
 <h1 id="十二-并行计算"><a href="#十二-并行计算" class="headerlink" title="十二 并行计算"></a>十二 并行计算</h1><p>重复以下步骤直到收敛</p>
 <ol>
 <li>广播 (Broadcast): 服务器广播模型参数到所有节点 (老板给打工仔发任务)</li>
@@ -361,9 +361,9 @@
 </li>
 </ul>
 <p>策略网络为 $\pi(\cdot \mid s; \theta^i)$​ or $\mu(s;\theta^i)$</p>
-<p>动作价值函数 $Q<em>\pi^i(s_t,a_t) = \mathbb{E}</em>{S<em>{t+1},…,S_n,A</em>{t+1},…,A_n}[U_t^i \mid S_t=s_t, A_t = a_t]$</p>
+<p>动作价值函数 $Q_\pi^i(s_t,a_t) = \mathbb{E}_{S_{t+1},…,S_n,A_{t+1},…,A_n}[U_t^i \mid S_t=s_t, A_t = a_t]$</p>
 <p>整体动作 $A$ 的概率密度函数 $\pi(A\mid S;\theta^1,…,\theta^m) = \Pi_{i=1}^m \pi(A^i \mid S;\theta^i)$</p>
-<p>状态价值函数 $V<em>\pi^i(s) = \mathbb{E}_A[Q</em>\pi^i(s,A)] = \sum\limits<em>{a^1 \in \mathcal{A}^1}\sum\limits</em>{a^2 \in \mathcal{A}^2}…\sum\limits<em>{a^m \in \mathcal{A}^m} \pi(A\mid S;\theta^1,…,\theta^m)Q</em>\pi^i(s,a)$</p>
+<p>状态价值函数 $V_\pi^i(s) = \mathbb{E}_A[Q_\pi^i(s,A)] = \sum\limits_{a^1 \in \mathcal{A}^1}\sum\limits_{a^2 \in \mathcal{A}^2}…\sum\limits_{a^m \in \mathcal{A}^m} \pi(A\mid S;\theta^1,…,\theta^m)Q_\pi^i(s,a)$</p>
 <h1 id="十四-合作关系-MARL"><a href="#十四-合作关系-MARL" class="headerlink" title="十四 合作关系 MARL"></a>十四 合作关系 MARL</h1><p>$S = [O^1,O^2,…,O^m]$</p>
 <p>$R,U,Q,V,J$ 均相同</p>
 <h3 id="MAC-A2C"><a href="#MAC-A2C" class="headerlink" title="MAC-A2C"></a>MAC-A2C</h3><p>Multi-Agent Cooperative Advantage Actor-Critic</p>
@@ -371,9 +371,9 @@
 <li><p>价值网络: $v(s;w)$​​. 所有 Agent 共用, 输入为上方定义的 s, 输出为对 s 的评分 .TD 算法训练.</p>
 </li>
 <li><p>策略网络: $\pi(\cdot \mid s;\theta^i)$​. 每个 Agent 独有, 输入为 s, 输出为 $\mathcal{A}^i$ 的概率分布</p>
-<p>$\nabla<em>{\theta^i} J(\theta^1,…,\theta^m) = \mathbb{E}</em>{S,A}[(Q<em>\pi(S,A) - V</em>\pi(S))\cdot\nabla_{\theta^i} \ln\pi(A^i\mid S;\theta^i)]$</p>
-<p>$g^i(s,a;\theta^i) = (Q<em>\pi(s,a) - V</em>\pi(s))\cdot\nabla_{\theta^i} \ln\pi(a^i\mid s;\theta^i)$</p>
-<p>$g^i(s<em>t,a_t;\theta^i) = (r_t+\gamma \cdot v(s</em>{t+1};w) - v<em>\pi(s_t;w))\cdot\nabla</em>{\theta^i} \ln\pi(a_t^i\mid s_t;\theta^i)$</p>
+<p>$\nabla_{\theta^i} J(\theta^1,…,\theta^m) = \mathbb{E}_{S,A}[(Q_\pi(S,A) - V_\pi(S))\cdot\nabla_{\theta^i} \ln\pi(A^i\mid S;\theta^i)]$</p>
+<p>$g^i(s,a;\theta^i) = (Q_\pi(s,a) - V_\pi(s))\cdot\nabla_{\theta^i} \ln\pi(a^i\mid s;\theta^i)$</p>
+<p>$g^i(s_t,a_t;\theta^i) = (r_t+\gamma \cdot v(s_{t+1};w) - v_\pi(s_t;w))\cdot\nabla_{\theta^i} \ln\pi(a_t^i\mid s_t;\theta^i)$</p>
 </li>
 </ul>
 <p>同策略 $\pi(\cdot\mid s_t;\theta^i)$</p>
@@ -393,8 +393,8 @@
 <p>两次学习优劣评价: 交换对手.</p>
 <h3 id="MAN-A2C"><a href="#MAN-A2C" class="headerlink" title="MAN-A2C"></a>MAN-A2C</h3><p>Multi-Agent Non-cooperative A2C</p>
 <p>m 个策略网络 + m 个价值网络</p>
-<p>$\nabla<em>{\theta^i} J(\theta^1,…,\theta^m) = \mathbb{E}</em>{S,A}[(Q<em>\pi^i(S,A) - V</em>\pi^i(S))\cdot\nabla_{\theta^i} \ln\pi(A^i\mid S;\theta^i)]$​</p>
-<p>  $g^i(s<em>t,a_t^i;\theta^i) = (r_t^i+\gamma \cdot v(s</em>{t+1};w^i) - v<em>\pi(s_t;w^i))\cdot\nabla</em>{\theta^i} \ln\pi(a_t^i\mid s_t;\theta^i)$​</p>
+<p>$\nabla_{\theta^i} J(\theta^1,…,\theta^m) = \mathbb{E}_{S,A}[(Q_\pi^i(S,A) - V_\pi^i(S))\cdot\nabla_{\theta^i} \ln\pi(A^i\mid S;\theta^i)]$​</p>
+<p>  $g^i(s_t,a_t^i;\theta^i) = (r_t^i+\gamma \cdot v(s_{t+1};w^i) - v_\pi(s_t;w^i))\cdot\nabla_{\theta^i} \ln\pi(a_t^i\mid s_t;\theta^i)$​</p>
 <p>同策略 $\pi(\cdot\mid s_t;\theta^i)$​</p>
 <ul>
 <li>中心化训练+中心化决策: 中央收集各 Agent 的观测, m 个评委分别评价各个Agent, m 个策略网络产生动作.</li>
@@ -415,7 +415,7 @@
 <p>可将中心化的 $m$ 个价值网络/策略网络用 1 个带自注意力层的网络实现. $m$​ 越大效果越好.</p>
 <h1 id="十七-模仿学习"><a href="#十七-模仿学习" class="headerlink" title="十七 模仿学习"></a>十七 模仿学习</h1><p>Imitation Learning</p>
 <p>不是强化学习. 通过向人类专家学习策略网络, 使其做出与专家相同决策, 而非强化学习使累计奖励最大化. 训练成本低 (无人驾驶不用撞车).</p>
-<h3 id="行为克隆"><a href="#行为克隆" class="headerlink" title="行为克隆"></a>行为克隆</h3><p>本质为监督学习, 数据集为 {(状态, 动作)}, 不需要与环境交互.</p>
+<h3 id="行为克隆"><a href="#行为克隆" class="headerlink" title="行为克隆"></a>行为克隆</h3><p>本质为监督学习, 数据集为 \{(状态, 动作)\}, 不需要与环境交互.</p>
 <ul>
 <li>连续控制: 回归</li>
 <li>离散控制: 多类别分类器, 输出各动作概率</li>
@@ -448,7 +448,7 @@
       <i class="fa fa-chevron-left"></i> DSP note
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/09/13/Control_Theory_note/" rel="next" title="Control Theory note">
+    <a href="/2021/09/13/control_theory_note/" rel="next" title="Control Theory note">
       Control Theory note <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
