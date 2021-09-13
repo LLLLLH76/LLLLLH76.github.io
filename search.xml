@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<p>Heuristic Search and Evolutionary Algorithms</p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Control Theory note</title>
     <url>/2021/09/13/Control_Theory_note/</url>
     <content><![CDATA[<p>Control Theory</p>
@@ -322,5 +305,22 @@
 <p>同时训练两者, 增强生成器以假乱真与判别器判别的能力.</p>
 <p>GAIL 的生成器是策略网络, 输入状态输出动作. 判别器输入状态, 输出 $|\mathcal{A}|$ 维向量 $\hat{p}$, 每个元素 $\hat{p}_a \in (0,1)$ 表示 $(s,a)$ 真假程度 ($a$ 是否为人类专家(真样本)所做)</p>
 <h1 id="十八-AlphaGo-与-MCTS"><a href="#十八-AlphaGo-与-MCTS" class="headerlink" title="十八 AlphaGo 与 MCTS"></a>十八 AlphaGo 与 MCTS</h1>]]></content>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<p>Heuristic Search and Evolutionary Algorithms</p>
+<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
   </entry>
 </search>
