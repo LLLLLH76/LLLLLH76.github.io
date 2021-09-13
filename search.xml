@@ -3,8 +3,7 @@
   <entry>
     <title>Control Theory note</title>
     <url>/2021/09/13/Control_Theory_note/</url>
-    <content><![CDATA[<p>Control Theory</p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>控制: 使受控对象产生预期相应 (按照预期方式工作).</p>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>控制: 使受控对象产生预期相应 (按照预期方式工作).</p>
 <p>输入(激励) —&gt; 输出(相应)</p>
 <p>自动控制: 无人参与情况下, 利用控制装置使受控对象的某一受控变量自动按照预定规律运行.</p>
 <p>受控对象: 要求实现自动工作的机器, 设备或生产过程. 有多个受控变量.</p>
@@ -278,8 +277,7 @@
   <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
-    <content><![CDATA[<p>Digital Systems Processing</p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
 <ul>
 <li><p>时间为自变量</p>
 <ul>
@@ -309,8 +307,7 @@
   <entry>
     <title>HSEA note</title>
     <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<p>Heuristic Search and Evolutionary Algorithms</p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
 <ul>
 <li>initial state (what about state space?)</li>
 <li>actions</li>
