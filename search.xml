@@ -63,7 +63,7 @@
   </entry>
   <entry>
     <title>DRL note</title>
-    <url>/2021/09/13/DRLnote/</url>
+    <url>/2021/09/13/DRL_note/</url>
     <content><![CDATA[<h2 id="3-4-价值函数"><a href="#3-4-价值函数" class="headerlink" title="3.4 价值函数"></a>3.4 价值函数</h2><p>状态价值函数 V_pi ( s_t ), 仅依赖于 s_t, 而 a_t, s_t+1, a_t+1,…都被期望消掉了</p>
 <p>动作价值函数 $Q(s_t, a_t)$, 仅依赖于 $s_t, a_t,$ 而 $s_{t+1}, a_{t+1}$,…都被期望消掉了</p>
 <p>最优动作价值函数 $Q_\star (s,a) = \max_\pi Q (s,a)$, 若 $Q_\star$ 已知, 给定当前状态 $s$, 策略为选择使 $Q_\star$ 最大的 $a$</p>
