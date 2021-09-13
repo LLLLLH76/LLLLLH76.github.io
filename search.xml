@@ -222,7 +222,7 @@
 </ul>
 <p>同策略 $\pi(\cdot\mid s_t;\theta^i)$</p>
 <p>Agent 不能独立做决策, 需要知道所有 Agent 的观测, 即全局状态.</p>
-<p><img src="../images/1.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/1.png" alt=""></p>
 <p>trade-off: 通信慢, 但不近似网络, 效果好.</p>
 <ul>
 <li>中心化训练+中心化决策: 1 个价值网络 + m 个策略网络, 中央收集各 Agent 的观测, 分配决策, Agent 完全不用思考. 由于必须等待所有观测组成状态, 产生短板效应, 延迟高.</li>
