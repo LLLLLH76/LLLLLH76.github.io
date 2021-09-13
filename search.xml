@@ -215,6 +215,23 @@
 <h1 id="十八-AlphaGo-与-MCTS"><a href="#十八-AlphaGo-与-MCTS" class="headerlink" title="十八 AlphaGo 与 MCTS"></a>十八 AlphaGo 与 MCTS</h1>]]></content>
   </entry>
   <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<p>Heuristic Search and Evolutionary Algorithms</p>
+<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
     <content><![CDATA[<p>Digital Systems Processing</p>
@@ -243,23 +260,6 @@
 <p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
 <p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
 <p>时域 <del>\</del> 傅里叶变换 <del>\</del> 频域 (从频率角度提取特征)</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<p>Heuristic Search and Evolutionary Algorithms</p>
-<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
 ]]></content>
   </entry>
   <entry>
