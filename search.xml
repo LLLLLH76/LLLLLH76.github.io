@@ -61,52 +61,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>DSP note</title>
-    <url>/2021/09/13/DSP_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
-<ul>
-<li><p>时间为自变量</p>
-<ul>
-<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
-</li>
-<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>模拟信号 </p>
-<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
-<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
-<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
-<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
-<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
-<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
-<p>FFT: Fast Fourier Transformation</p>
-<p>时域: 以时间为自变量描述信号和系统</p>
-<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
-<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
-<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
-<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
-<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-  </entry>
-  <entry>
     <title>DRL note</title>
     <url>/2021/09/13/DRL_note/</url>
     <content><![CDATA[<h2 id="3-4-价值函数"><a href="#3-4-价值函数" class="headerlink" title="3.4 价值函数"></a>3.4 价值函数</h2><p>状态价值函数 V_pi ( s_t ), 仅依赖于 s_t, 而 a_t, s_t+1, a_t+1,…都被期望消掉了</p>
@@ -319,5 +273,51 @@
 <p>同时训练两者, 增强生成器以假乱真与判别器判别的能力.</p>
 <p>GAIL 的生成器是策略网络, 输入状态输出动作. 判别器输入状态, 输出 $|\mathcal{A}|$ 维向量 $\hat{p}$, 每个元素 $\hat{p}_a \in (0,1)$ 表示 $(s,a)$ 真假程度 ($a$ 是否为人类专家(真样本)所做)</p>
 <h1 id="十八-AlphaGo-与-MCTS"><a href="#十八-AlphaGo-与-MCTS" class="headerlink" title="十八 AlphaGo 与 MCTS"></a>十八 AlphaGo 与 MCTS</h1>]]></content>
+  </entry>
+  <entry>
+    <title>DSP note</title>
+    <url>/2021/09/13/DSP_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
+<ul>
+<li><p>时间为自变量</p>
+<ul>
+<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
+</li>
+<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>模拟信号 </p>
+<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
+<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
+<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
+<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
+<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
+<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
+<p>FFT: Fast Fourier Transformation</p>
+<p>时域: 以时间为自变量描述信号和系统</p>
+<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
+<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
+<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
+<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
+<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
   </entry>
 </search>
