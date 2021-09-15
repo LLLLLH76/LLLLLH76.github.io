@@ -80,6 +80,39 @@
       </categories>
   </entry>
   <entry>
+    <title>DSP note</title>
+    <url>/2021/09/13/DSP_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
+<ul>
+<li><p>时间为自变量</p>
+<ul>
+<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
+</li>
+<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>模拟信号 </p>
+<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
+<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
+<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
+<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
+<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
+<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
+<p>FFT: Fast Fourier Transformation</p>
+<p>时域: 以时间为自变量描述信号和系统</p>
+<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
+<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
+<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
+<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
+<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DRL note</title>
     <url>/2021/09/13/DRL_note/</url>
     <content><![CDATA[<h2 id="3-4-价值函数"><a href="#3-4-价值函数" class="headerlink" title="3.4 价值函数"></a>3.4 价值函数</h2><p>状态价值函数 V_pi ( s_t ), 仅依赖于 s_t, 而 a_t, s_t+1, a_t+1,…都被期望消掉了</p>
@@ -297,48 +330,6 @@
       </categories>
   </entry>
   <entry>
-    <title>DSP note</title>
-    <url>/2021/09/13/DSP_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
-<ul>
-<li><p>时间为自变量</p>
-<ul>
-<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
-</li>
-<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>模拟信号 </p>
-<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
-<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
-<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
-<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
-<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
-<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
-<p>FFT: Fast Fourier Transformation</p>
-<p>时域: 以时间为自变量描述信号和系统</p>
-<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
-<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
-<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
-<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
-<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu20.04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>先埋个坑.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
     <title>HSEA note</title>
     <url>/2021/09/13/HSEA_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
@@ -355,6 +346,26 @@
 ]]></content>
       <categories>
         <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu20.04%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>先埋个坑.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>初试类魂游戏</title>
+    <url>/2021/09/14/%E6%8B%89%E9%BB%91%E7%B1%BB%E9%AD%82%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
+<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
+<p>算了, 以后有时间再来挑战吧.</p>
+]]></content>
+      <categories>
+        <category>casual writing</category>
       </categories>
   </entry>
   <entry>
@@ -394,17 +405,6 @@
 ]]></content>
       <categories>
         <category>record</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>初试类魂游戏</title>
-    <url>/2021/09/14/%E6%8B%89%E9%BB%91%E7%B1%BB%E9%AD%82%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
-<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
-<p>算了, 以后有时间再来挑战吧.</p>
-]]></content>
-      <categories>
-        <category>casual writing</category>
       </categories>
   </entry>
 </search>
