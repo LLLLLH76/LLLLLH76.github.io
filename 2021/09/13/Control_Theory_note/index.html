@@ -27,10 +27,12 @@
 <meta property="og:site_name" content="Mind Palace">
 <meta property="og:description" content="Note for Control Theory">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png">
 <meta property="article:published_time" content="2021-09-13T11:57:06.000Z">
-<meta property="article:modified_time" content="2021-09-14T12:44:33.948Z">
+<meta property="article:modified_time" content="2021-09-17T07:43:18.159Z">
 <meta property="article:author" content="LLH">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png">
 
 <link rel="canonical" href="https://lllllh76.github.io/2021/09/13/Control_Theory_note/">
 
@@ -214,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-14 20:44:33" itemprop="dateModified" datetime="2021-09-14T20:44:33+08:00">2021-09-14</time>
+                <time title="Modified: 2021-09-17 15:43:18" itemprop="dateModified" datetime="2021-09-17T15:43:18+08:00">2021-09-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -309,6 +311,42 @@
 <li>余弦函数: $ \cos \omega t \rightarrow \frac{s}{s^2 + \omega^2}$​ , 极点 $s_{1,2} = \pm j \omega$</li>
 <li>单位脉冲函数: $\lim\limits_{\epsilon \rightarrow 0} \frac{1}{\epsilon} \rightarrow 1$</li>
 </ul>
+<p>五大定理</p>
+<ul>
+<li>位移定理: 时间 $t$ 平移, 频率域 $s$​ 平移, 时间 $t$ 尺度变换</li>
+<li><strong>微分定理</strong></li>
+<li>积分定理</li>
+<li><strong>终值定理</strong></li>
+<li>初值定理</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png" alt=""></p>
+<h1 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h1><p>拉氏反变换 $f(t) = L^{-1} [F(s)]$</p>
+<p>可将 $F(s)$​ 分解为典型函数的叠加 $L^{-1}[F(s)] = L^{-1}[F_1(s)] + L^{-1}[F_2(s)] + … +L^{-1}[F_n(s)]$​</p>
+<p> 通常 $F(s) = \frac{B(s)}{A(s)} =\frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{c_{0}s^{m} + c_{1}s^{m-1} + … + c_{m-1}s^{} + c_{m}}{(s+p_1)(s+p_2)…(s+p_n)} $</p>
+<p>$F(s)$ 的极点: 使分母 $A(s) = 0$ 的根​</p>
+<p>$F(s)$ 的零点: 使分子 $B(s) = 0$ 的根​</p>
+<ol>
+<li>$F(s)$ 只有不同的实数极点 $F(s) = \sum\limits _{i=1} ^n \frac{A_i}{s+p_i} \Rightarrow L^{-1}[F(s)] = \sum\limits _{i=1} ^n L^{-1} [\frac{A_i}{s+p_i}] = \sum\limits _{i=1} ^n A_i e^{-p_i t}$ </li>
+<li>$F(s)$​​ 有共轭复数极点 </li>
+<li>$F(s)$​ 有重极点</li>
+</ol>
+<p>用拉氏变换求微分方程</p>
+<ol>
+<li>将方程通过拉氏变换变为 $s$ 的代数方程</li>
+<li>解代数方程得到 $F(s)$</li>
+<li>反变换回时域解 $f(t)$</li>
+</ol>
+<p>受控变量运动模态取决于其变换函数 $Y(s)$​ 的极点(分母多项式方程的根)</p>
+<ul>
+<li>$s = -a \Leftrightarrow e^{-at}$</li>
+<li>$s = \pm j \omega \Leftrightarrow \sin(\omega t)$</li>
+</ul>
+<p>传递函数: 在0初始条件下, 系统输出量的拉氏变换与输入量拉氏变换的比值</p>
+<p>只适用于线性定常系统</p>
+<p>$G(s) = \frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{M(s)}{N(s)}$​</p>
+<p>$n \ge m$, 系数均为实数</p>
+<p>放大系数(增益): $G(0) = \frac{b_m}{a_n} = K$</p>
+<p>$N(s) = 0$ 称为系统的特征方程, 其根为系统的特征根, $s$ 的最高阶次等于系统的阶次</p>
 
     </div>
 
@@ -406,7 +444,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-3"><span class="nav-number">3.</span> <span class="nav-text">Lecture 3</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
