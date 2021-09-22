@@ -171,37 +171,24 @@
       </categories>
   </entry>
   <entry>
-    <title>山水一方</title>
-    <url>/2021/09/20/shanshuiyifang/</url>
-    <content><![CDATA[<p>2021.9.20</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092003.jpg" style="zoom:10%;" /></p>
-<center>雪山杨枝甘露 15元</center>
-
-<blockquote>
-<p>虚假的雪山: 香<del>菜</del>草味冰淇淋</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092004.jpg" style="zoom:10%;" /></p>
-<center>杨枝甘露 12元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092006.jpg" style="zoom:15%;" /></p>
-<center>芒果绵绵冰 26元</center>
-
-<blockquote>
-<p>真实的雪山: 绵软的口感, 甜甜的冰淇淋</p>
-</blockquote>
-<center>总价 15 + 12 + 26 = 53 元, 加美团 50 - 10 券 43 元, 人均 14.3 元.</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>店面较小, 生意火爆, 有一点挤.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>印象中等了10分钟左右.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>沙墩路二号第一栋首层第4卡商铺</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092008.jpg" style="zoom:50%;" /></p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
-<p>中秋快乐.</p>
+    <title>初试类魂游戏</title>
+    <url>/2021/09/14/NIOH/</url>
+    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
+<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
+<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
+<p>算了, 以后有时间再来挑战吧.</p>
 ]]></content>
       <categories>
-        <category>Restaurants</category>
+        <category>casual writing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
+    <content><![CDATA[<p>先埋个坑.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -286,7 +273,7 @@
 </tr>
 <tr>
 <td style="text-align:center">充电宝</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
 <td style="text-align:center">键盘</td>
@@ -302,19 +289,19 @@
 </tr>
 <tr>
 <td style="text-align:center">坚果</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
 <td style="text-align:center">月饼</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
 <td style="text-align:center">衣服</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
 <td style="text-align:center">拉力器</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
 <td style="text-align:center">口罩</td>
@@ -330,7 +317,7 @@
 </tr>
 <tr>
 <td style="text-align:center">洗面奶</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
@@ -341,30 +328,49 @@
       </categories>
   </entry>
   <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
-    <content><![CDATA[<p>先埋个坑.</p>
+    <title>山水一方</title>
+    <url>/2021/09/20/shanshuiyifang/</url>
+    <content><![CDATA[<p>2021.9.20</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092003.jpg" style="zoom:10%;" /></p>
+<center>雪山杨枝甘露 15元</center>
+
+<blockquote>
+<p>虚假的雪山: 香<del>菜</del>草味冰淇淋</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092004.jpg" style="zoom:10%;" /></p>
+<center>杨枝甘露 12元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092006.jpg" style="zoom:15%;" /></p>
+<center>芒果绵绵冰 26元</center>
+
+<blockquote>
+<p>真实的雪山: 绵软的口感, 甜甜的冰淇淋</p>
+</blockquote>
+<center>总价 15 + 12 + 26 = 53 元, 加美团 50 - 10 券 43 元, 人均 14.3 元.</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>店面较小, 生意火爆, 有一点挤.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>印象中等了10分钟左右.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>沙墩路二号第一栋首层第4卡商铺</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092008.jpg" style="zoom:50%;" /></p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
+<p>中秋快乐.</p>
 ]]></content>
       <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>初试类魂游戏</title>
-    <url>/2021/09/14/NIOH/</url>
-    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
-<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
-<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
-<p>算了, 以后有时间再来挑战吧.</p>
-]]></content>
-      <categories>
-        <category>casual writing</category>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
     <title>高中摘抄</title>
     <url>/2019/09/01/zhaichao/</url>
-    <content><![CDATA[<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="9-6"><a href="#9-6" class="headerlink" title="9.6"></a>9.6</h3><p>野有饿殍: 野外有饿死的人, 形容兵荒马乱或凶年饥岁的悲惨景象</p>
+    <content><![CDATA[<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="9-7"><a href="#9-7" class="headerlink" title="9.7"></a>9.7</h3><p>汗牛充栋: 形容书籍多, 不能形容其他东西</p>
+<p>耳提面命: 用于长辈对晚辈</p>
+<p>三令五申: 用于上级对下级</p>
+<p>玩岁愒kai\日: 指贪图安逸, 荒废岁月</p>
+<p>乌衣子弟: 借指出身名门贵族的人</p>
+<p>意兴阑珊: 指意趣, 兴致低落将近</p>
+<h3 id="9-6"><a href="#9-6" class="headerlink" title="9.6"></a>9.6</h3><p>野有饿殍: 野外有饿死的人, 形容兵荒马乱或凶年饥岁的悲惨景象</p>
 <p>苦心孤诣: 刻苦钻研探索, 达到某种独到的境界</p>
 <p>惨淡经营: 惨淡, 尽心思虑, 经营, 指规划或构思. 原指艺术创作过程中苦心构思, 精心布局, 后也形容苦心谋划并从事某事或某项事业</p>
 <p>筚路蓝缕: 驾着柴车, 穿着破衣服, 形容创业的艰难</p>
