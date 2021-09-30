@@ -76,11 +76,33 @@
 </ul>
 <p>五大定理</p>
 <ul>
-<li>位移定理: 时间 $t$ 平移, 频率域 $s$​ 平移, 时间 $t$ 尺度变换</li>
-<li><strong>微分定理</strong></li>
-<li>积分定理</li>
-<li><strong>终值定理</strong></li>
-<li>初值定理</li>
+<li>位移定理<ul>
+<li>时间 $t$​​ 平移 $L[f(t-a)] = e^{-as}F(s)$</li>
+<li>频率域 $s$​​​ 平移 $L[f(t)e^{-at}] = F(s+a)$</li>
+<li>时间 $t$​​ 尺度变换 $L[f(\frac{t}{a})] = aF(as)$</li>
+</ul>
+</li>
+<li><strong>微分定理</strong><ul>
+<li>$L[\frac{d}{dt} f(t)] = sF(s) - f(0)$​</li>
+<li>$L[\frac{d^2}{dt^2} f(t)] = s^2F(s) - sf(0)- f’(0)$</li>
+<li>$L[\frac{d^n}{dt^n} f(t)] = s^nF(s) - s^{n-1}f(0) - \cdots -sf^{(n-2)}(0) - f^{(n-1)}(0)$​</li>
+<li>零初始条件 $L[\frac{d^n}{dt^n} f(t)] = s^nF(s)$</li>
+</ul>
+</li>
+<li>积分定理<ul>
+<li>$L(\int f(t)dt) = \frac{F(s)}{s} + \frac{f^{-1}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
+<li>$L(\int \int f(t)dt) = \frac{F(s)}{s^2} + \frac{f^{-1}(0)}{s^2} + \frac{f^{-2}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
+<li>零初始条件 $L[\int\int\cdots\int f(t)dt^n] = \frac{F(s)}{s^n}$</li>
+</ul>
+</li>
+<li><strong>终值定理</strong><ul>
+<li>$\lim\limits_{t\rightarrow\infty} = \lim_\limits{s\rightarrow0}sF(s)$</li>
+</ul>
+</li>
+<li>初值定理<ul>
+<li>$\lim\limits_{t \rightarrow 0} f(t) = \lim\limits_{s \rightarrow \infty} sF(s) $​</li>
+</ul>
+</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png" alt=""></p>
 <h1 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h1><p>拉氏反变换 $f(t) = L^{-1} [F(s)]$</p>
@@ -183,6 +205,15 @@
       </categories>
   </entry>
   <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
+    <content><![CDATA[<p>先埋个坑.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DSPC note</title>
     <url>/2021/09/26/PC_note/</url>
     <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
@@ -277,15 +308,6 @@
 <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
       <categories>
         <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
-    <content><![CDATA[<p>先埋个坑.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -425,40 +447,6 @@
       </categories>
   </entry>
   <entry>
-    <title>山水一方</title>
-    <url>/2021/09/20/shanshuiyifang/</url>
-    <content><![CDATA[<p>2021.9.20</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092003.jpg" style="zoom:10%;" /></p>
-<center>雪山杨枝甘露 15元</center>
-
-<blockquote>
-<p>虚假的雪山: 香<del>菜</del>草味冰淇淋</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092004.jpg" style="zoom:10%;" /></p>
-<center>杨枝甘露 12元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092006.jpg" style="zoom:15%;" /></p>
-<center>芒果绵绵冰 26元</center>
-
-<blockquote>
-<p>真实的雪山: 绵软的口感, 甜甜的冰淇淋</p>
-</blockquote>
-<center>总价 15 + 12 + 26 = 53 元, 加美团 50 - 10 券 43 元, 人均 14.3 元.</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>店面较小, 生意火爆, 有一点挤.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>印象中等了10分钟左右.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>沙墩路二号第一栋首层第4卡商铺</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092008.jpg" style="zoom:50%;" /></p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
-<p>中秋快乐.</p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
     <title>高中摘抄</title>
     <url>/2019/09/01/zhaichao/</url>
     <content><![CDATA[<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="9-7"><a href="#9-7" class="headerlink" title="9.7"></a>9.7</h3><p>汗牛充栋: 形容书籍多, 不能形容其他东西</p>
@@ -542,6 +530,40 @@
 ]]></content>
       <categories>
         <category>record</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>山水一方</title>
+    <url>/2021/09/20/shanshuiyifang/</url>
+    <content><![CDATA[<p>2021.9.20</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092003.jpg" style="zoom:10%;" /></p>
+<center>雪山杨枝甘露 15元</center>
+
+<blockquote>
+<p>虚假的雪山: 香<del>菜</del>草味冰淇淋</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092004.jpg" style="zoom:10%;" /></p>
+<center>杨枝甘露 12元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092006.jpg" style="zoom:15%;" /></p>
+<center>芒果绵绵冰 26元</center>
+
+<blockquote>
+<p>真实的雪山: 绵软的口感, 甜甜的冰淇淋</p>
+</blockquote>
+<center>总价 15 + 12 + 26 = 53 元, 加美团 50 - 10 券 43 元, 人均 14.3 元.</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>店面较小, 生意火爆, 有一点挤.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>印象中等了10分钟左右.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>沙墩路二号第一栋首层第4卡商铺</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092008.jpg" style="zoom:50%;" /></p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
+<p>中秋快乐.</p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
