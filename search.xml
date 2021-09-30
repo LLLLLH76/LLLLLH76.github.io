@@ -119,25 +119,6 @@
       </categories>
   </entry>
   <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
@@ -165,6 +146,25 @@
 <p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
 <p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
 <p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
 ]]></content>
       <categories>
         <category>lecture notes</category>
@@ -277,6 +277,15 @@
 <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
       <categories>
         <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
+    <content><![CDATA[<p>先埋个坑.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -416,15 +425,6 @@
       </categories>
   </entry>
   <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu20.04configuration/</url>
-    <content><![CDATA[<p>先埋个坑.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
     <title>山水一方</title>
     <url>/2021/09/20/shanshuiyifang/</url>
     <content><![CDATA[<p>2021.9.20</p>
@@ -453,48 +453,6 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
 <p>中秋快乐.</p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>中华茶楼</title>
-    <url>/2021/09/15/zhonghuachalou/</url>
-    <content><![CDATA[<p>2021.9.15</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
-<center>凤爪 23元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
-<center>牛仔骨 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
-<center>虾饺 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
-<center>葡挞 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
-<center>榴莲酥 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
-<center>乳鸽 72元 2只</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
-<center>马拉糕 15元</center>
-
-<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
-<center>自取点心</center>
-
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
-<center> 蓝色楼顶那里 </center>
-
 ]]></content>
       <categories>
         <category>Restaurants</category>
@@ -584,6 +542,48 @@
 ]]></content>
       <categories>
         <category>record</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>中华茶楼</title>
+    <url>/2021/09/15/zhonghuachalou/</url>
+    <content><![CDATA[<p>2021.9.15</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
+<center>凤爪 23元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
+<center>牛仔骨 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
+<center>虾饺 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
+<center>葡挞 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
+<center>榴莲酥 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
+<center>乳鸽 72元 2只</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
+<center>马拉糕 15元</center>
+
+<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
+<center>自取点心</center>
+
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
+<center> 蓝色楼顶那里 </center>
+
+]]></content>
+      <categories>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
