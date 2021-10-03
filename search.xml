@@ -141,6 +141,37 @@
       </categories>
   </entry>
   <entry>
+    <title>初试类魂游戏</title>
+    <url>/2021/09/14/NIOH/</url>
+    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
+<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
+<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
+<p>算了, 以后有时间再来挑战吧.</p>
+]]></content>
+      <categories>
+        <category>casual writing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
@@ -171,37 +202,6 @@
 ]]></content>
       <categories>
         <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>初试类魂游戏</title>
-    <url>/2021/09/14/NIOH/</url>
-    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
-<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
-<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
-<p>算了, 以后有时间再来挑战吧.</p>
-]]></content>
-      <categories>
-        <category>casual writing</category>
       </categories>
   </entry>
   <entry>
@@ -311,6 +311,27 @@
       </categories>
   </entry>
   <entry>
+    <title>戴小姐披萨店</title>
+    <url>/2021/10/03/daixiaojie/</url>
+    <content><![CDATA[<p>2021.10.3</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100301.jpg" style="zoom:10%;" /></p>
+<center>薯条 12元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100302.jpg" style="zoom:10%;" /></p>
+<center>海苔鳗鱼披萨 60元</center>
+
+<center>总价72元 人均36元</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>装修风格不错, 明亮整洁, 但是在一楼用餐时会有小虫子</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区仙林大道163号南大和园</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100304.jpg" style="zoom:20%;" /></p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
     <title>花津浦</title>
     <url>/2021/10/01/huajinpu/</url>
     <content><![CDATA[<p>2021.10.1</p>
@@ -341,27 +362,6 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
 <p>国庆快乐.</p>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>戴小姐披萨店</title>
-    <url>/2021/10/03/daixiaojie/</url>
-    <content><![CDATA[<p>2021.10.3</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100301.jpg" style="zoom:10%;" /></p>
-<center>薯条 12元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100302.jpg" style="zoom:10%;" /></p>
-<center>海苔鳗鱼披萨 60元</center>
-
-<center>总价72元 人均36元</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>装修风格不错, 明亮整洁, 但是在一楼用餐时会有小虫子</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区仙林大道163号南大和园</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100304.jpg" style="zoom:20%;" /></p>
 ]]></content>
       <categories>
         <category>Restaurants</category>
