@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093008.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093009.png">
 <meta property="article:published_time" content="2021-09-26T11:57:00.000Z">
-<meta property="article:modified_time" content="2021-09-30T02:49:16.113Z">
+<meta property="article:modified_time" content="2021-10-07T13:27:17.292Z">
 <meta property="article:author" content="LLH">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093001.png">
@@ -226,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-30 10:49:16" itemprop="dateModified" datetime="2021-09-30T10:49:16+08:00">2021-09-30</time>
+                <time title="Modified: 2021-10-07 21:27:17" itemprop="dateModified" datetime="2021-10-07T21:27:17+08:00">2021-10-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,7 +292,7 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093011.png" style="zoom: 67%;" /></p>
 <ul>
 <li>DIR 支持分布 cache 的一致性</li>
-<li>与 SMP相比, 物理上有分布在各节点中的局存, 形成共享存储器</li>
+<li>与 SMP 相比, 物理上有分布在各节点中的局存, 形成共享存储器</li>
 <li>单一地址编程空间, 比 MPP 编程容易</li>
 </ul>
 </li>
@@ -339,7 +339,113 @@
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="静态互连网络"><a href="#静态互连网络" class="headerlink" title="静态互连网络"></a>静态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093008.png" style="zoom: 80%;" /></p>
 <h3 id="动态互连网络"><a href="#动态互连网络" class="headerlink" title="动态互连网络"></a>动态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093009.png" style="zoom: 80%;" /></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>第一章</p>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="加速比"><a href="#加速比" class="headerlink" title="加速比"></a>加速比</h3><p>并行系统的加速(比): 对于一个给定的应用, 并行程序的执行速度相对于串行程序的执行速度加快了多少倍.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">处理器数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$W = W_{series} + W_{parallel}$</td>
+<td style="text-align:center">问题规模</td>
+</tr>
+<tr>
+<td style="text-align:center">$f = W_s / W$</td>
+<td style="text-align:center">串行分量比例</td>
+</tr>
+<tr>
+<td style="text-align:center">$1 - f$</td>
+<td style="text-align:center">并行分量比例</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_s$</td>
+<td style="text-align:center">串行执行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_p$</td>
+<td style="text-align:center">并行执行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$S$</td>
+<td style="text-align:center">加速比</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="Amdahl-定律"><a href="#Amdahl-定律" class="headerlink" title="Amdahl 定律"></a>Amdahl 定律</h4><p>固定计算负载, 提高速度, 可增大 $p$​</p>
+<p>$S = \frac{W_s+W_p}{W_s+W_p/p} =\frac{ f + (1-f)}{f+\frac{1-f}{p}} = \frac{p}{1+f(p-1)} \rightarrow\frac{1}{f}$​</p>
+<p>即假设 $f=0.5$, 即使 $p$ 无限大, 加速上限为 2 倍.</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S = \frac{W_s+W_p}{W_s+W_p/p+W_o} = \frac{p}{1+f(p-1)+W_op/W} \rightarrow\frac{1}{f+W_o/W}$</p>
+<p>串行分量和并行额外开销越大, 加速越小</p>
+<h4 id="Gustafson-定律"><a href="#Gustafson-定律" class="headerlink" title="Gustafson 定律"></a>Gustafson 定律</h4><p>可扩放问题. 提高精度, 增大计算量(问题规模). 认为增多处理器必须相应地增大问题规模才有意义.</p>
+<p>$S’ = \frac{W_s+pW_p}{W_s+pW_p/p} =p-f(p-1)$</p>
+<p>当 $p$ 充分大, $S’$ 与 $p$ 呈线性关系, 斜率为 $1-f$</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S’ = \frac{W_s+pW_p}{W_s+pW_p/p+W_o} =\frac{f+p(1-f)}{1+W_o / W}$</p>
+<h4 id="Sun-and-Ni-定律"><a href="#Sun-and-Ni-定律" class="headerlink" title="Sun and Ni 定律"></a>Sun and Ni 定律</h4><p>受限于存储器. 认为只要存储许可, 应尽量增大问题规模.</p>
+<p>设单节点使用全部存储 $M$ 求解 $W = fW +(1-f)W$.</p>
+<p>$p$ 个节点存储为 $pM$, 设 $G(p)$ 为存储增加到 $p$ 倍时负载的增加量, 则 $W = fW + (1-f)G(p)W$</p>
+<p>$S’’ = \frac{fW + (1-f)G(p)W}{fW + (1-f)G(p)W /p} = \frac{f + (1-f)G(p)}{f + (1-f)G(p) /p}$</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S’’ =\frac{f + (1-f)G(p)}{f + (1-f)G(p) /p+W_o / W}$​</p>
+<ul>
+<li>当 $G(p)$ = 1, 变为 Amdahl</li>
+<li>当 $G(p)$​ = $p$, 变为 Gustafson</li>
+</ul>
+<hr>
+<p>一般 $\frac{p}{\log p} \le S \le p$</p>
+<h3 id="可扩放性"><a href="#可扩放性" class="headerlink" title="可扩放性"></a>可扩放性</h3><p>区别于加速比的另一种性能指标: 性能随 $p$ 的增加而按比例提高的能力.</p>
+<p>衡量程序能否有效利用扩充的处理器.</p>
+<h4 id="等效率度量标准"><a href="#等效率度量标准" class="headerlink" title="等效率度量标准"></a>等效率度量标准</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$t_e^i$</th>
+<th style="text-align:center">第 $i$ 个处理器的有用计算时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$t_o^i$</td>
+<td style="text-align:center">第 $i$ 个处理器的额外开销时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_p = t_e^i + t_o^i = (T_e + T_o) / p$</td>
+<td style="text-align:center">处理器并行算法运行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$W = T_e = \sum\limits_{i=0} ^{p-1} t_e^i$</td>
+<td style="text-align:center">问题规模, 工作负载, 最佳串行算法所完成计算量</td>
+</tr>
+<tr>
+<td style="text-align:center">$S = \frac{T_e}{T_p} = \frac{p}{1+\frac{T_o}{W}}$</td>
+<td style="text-align:center">加速</td>
+</tr>
+<tr>
+<td style="text-align:center">$E=\frac{S}{p} = \frac{1}{1+\frac{T_o}{W}}$</td>
+<td style="text-align:center">效率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>为了维持 $E$​ 不变, 需在增大 $p$​ 的同时增大 $W = f_E(p)$​</p>
+<p>若 $W$ 随 $p$ 线性或亚线性增长, 则算法具有良好的可扩放性.</p>
+<p>若 $W$ 随 $p$ 指数等快速增长, 则算法不可扩放.</p>
+<h4 id="等速度度量标准"><a href="#等速度度量标准" class="headerlink" title="等速度度量标准"></a>等速度度量标准</h4><p>速度能以处理器数的增加而线性增加(平均速度不变), 则可扩放性好.</p>
+<p>速度 $V = W / T$</p>
+<p>平均速度 $\bar{V} = \frac{V}{p} = \frac{W}{pT}$​</p>
+<p>定义标准 $\Psi(p,p’) = \frac{W/p}{W’/p’}\in(0,1)$​​, 越大可扩放性越好.</p>
+<p>若平均速度保持不变, $\Psi = T/T’$</p>
+<p>$\Psi(1,p’) = \frac{T_1}{T_p’}=\frac{W}{W’/p’} = \frac{解决工作量为 W 的问题所需串行时间}{解决工作量为 W 的问题所需并行时间}$</p>
+<h4 id="平均延迟度量标准"><a href="#平均延迟度量标准" class="headerlink" title="平均延迟度量标准"></a>平均延迟度量标准</h4><p>$T_i$: $p_i$ 的执行时间, 包括运行时导致的延迟 $L_i$</p>
+<p>定义系统平均延迟时间 $\bar{L}(W,p) = \sum\limits_{i=1}^p(T_{para} - T_i + L_i) / p = T_{para} - T_{series} / p$</p>
+<p>定义标准 $\Phi(E,p,p’)=\frac{$\bar{L}(W,p)}{$\bar{L}(W’,p’)} \in (0,1)$, 越大可扩放性越好.</p>
+
     </div>
 
     
@@ -436,7 +542,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.1.</span> <span class="nav-text">静态互连网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.2.</span> <span class="nav-text">动态互连网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.1.</span> <span class="nav-text">静态互连网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.2.</span> <span class="nav-text">动态互连网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E6%AF%94"><span class="nav-number">4.1.</span> <span class="nav-text">加速比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Amdahl-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">Amdahl 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gustafson-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">Gustafson 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sun-and-Ni-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.3.</span> <span class="nav-text">Sun and Ni 定律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E6%89%A9%E6%94%BE%E6%80%A7"><span class="nav-number">4.2.</span> <span class="nav-text">可扩放性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E7%8E%87%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.1.</span> <span class="nav-text">等效率度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E9%80%9F%E5%BA%A6%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.2.</span> <span class="nav-text">等速度度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E5%BB%B6%E8%BF%9F%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.3.</span> <span class="nav-text">平均延迟度量标准</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

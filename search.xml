@@ -205,6 +205,23 @@
       </categories>
   </entry>
   <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
+      </categories>
+  </entry>
+  <entry>
     <title>DSPC note</title>
     <url>/2021/09/26/PC_note/</url>
     <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
@@ -249,7 +266,7 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093011.png" style="zoom: 67%;" /></p>
 <ul>
 <li>DIR 支持分布 cache 的一致性</li>
-<li>与 SMP相比, 物理上有分布在各节点中的局存, 形成共享存储器</li>
+<li>与 SMP 相比, 物理上有分布在各节点中的局存, 形成共享存储器</li>
 <li>单一地址编程空间, 比 MPP 编程容易</li>
 </ul>
 </li>
@@ -296,26 +313,115 @@
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="静态互连网络"><a href="#静态互连网络" class="headerlink" title="静态互连网络"></a>静态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093008.png" style="zoom: 80%;" /></p>
 <h3 id="动态互连网络"><a href="#动态互连网络" class="headerlink" title="动态互连网络"></a>动态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093009.png" style="zoom: 80%;" /></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>第一章</p>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2>]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="加速比"><a href="#加速比" class="headerlink" title="加速比"></a>加速比</h3><p>并行系统的加速(比): 对于一个给定的应用, 并行程序的执行速度相对于串行程序的执行速度加快了多少倍.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">处理器数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$W = W_{series} + W_{parallel}$</td>
+<td style="text-align:center">问题规模</td>
+</tr>
+<tr>
+<td style="text-align:center">$f = W_s / W$</td>
+<td style="text-align:center">串行分量比例</td>
+</tr>
+<tr>
+<td style="text-align:center">$1 - f$</td>
+<td style="text-align:center">并行分量比例</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_s$</td>
+<td style="text-align:center">串行执行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_p$</td>
+<td style="text-align:center">并行执行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$S$</td>
+<td style="text-align:center">加速比</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="Amdahl-定律"><a href="#Amdahl-定律" class="headerlink" title="Amdahl 定律"></a>Amdahl 定律</h4><p>固定计算负载, 提高速度, 可增大 $p$​</p>
+<p>$S = \frac{W_s+W_p}{W_s+W_p/p} =\frac{ f + (1-f)}{f+\frac{1-f}{p}} = \frac{p}{1+f(p-1)} \rightarrow\frac{1}{f}$​</p>
+<p>即假设 $f=0.5$, 即使 $p$ 无限大, 加速上限为 2 倍.</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S = \frac{W_s+W_p}{W_s+W_p/p+W_o} = \frac{p}{1+f(p-1)+W_op/W} \rightarrow\frac{1}{f+W_o/W}$</p>
+<p>串行分量和并行额外开销越大, 加速越小</p>
+<h4 id="Gustafson-定律"><a href="#Gustafson-定律" class="headerlink" title="Gustafson 定律"></a>Gustafson 定律</h4><p>可扩放问题. 提高精度, 增大计算量(问题规模). 认为增多处理器必须相应地增大问题规模才有意义.</p>
+<p>$S’ = \frac{W_s+pW_p}{W_s+pW_p/p} =p-f(p-1)$</p>
+<p>当 $p$ 充分大, $S’$ 与 $p$ 呈线性关系, 斜率为 $1-f$</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S’ = \frac{W_s+pW_p}{W_s+pW_p/p+W_o} =\frac{f+p(1-f)}{1+W_o / W}$</p>
+<h4 id="Sun-and-Ni-定律"><a href="#Sun-and-Ni-定律" class="headerlink" title="Sun and Ni 定律"></a>Sun and Ni 定律</h4><p>受限于存储器. 认为只要存储许可, 应尽量增大问题规模.</p>
+<p>设单节点使用全部存储 $M$ 求解 $W = fW +(1-f)W$.</p>
+<p>$p$ 个节点存储为 $pM$, 设 $G(p)$ 为存储增加到 $p$ 倍时负载的增加量, 则 $W = fW + (1-f)G(p)W$</p>
+<p>$S’’ = \frac{fW + (1-f)G(p)W}{fW + (1-f)G(p)W /p} = \frac{f + (1-f)G(p)}{f + (1-f)G(p) /p}$</p>
+<p>若考虑额外开销 $W_o$</p>
+<p>$S’’ =\frac{f + (1-f)G(p)}{f + (1-f)G(p) /p+W_o / W}$​</p>
+<ul>
+<li>当 $G(p)$ = 1, 变为 Amdahl</li>
+<li>当 $G(p)$​ = $p$, 变为 Gustafson</li>
+</ul>
 <hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
+<p>一般 $\frac{p}{\log p} \le S \le p$</p>
+<h3 id="可扩放性"><a href="#可扩放性" class="headerlink" title="可扩放性"></a>可扩放性</h3><p>区别于加速比的另一种性能指标: 性能随 $p$ 的增加而按比例提高的能力.</p>
+<p>衡量程序能否有效利用扩充的处理器.</p>
+<h4 id="等效率度量标准"><a href="#等效率度量标准" class="headerlink" title="等效率度量标准"></a>等效率度量标准</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$t_e^i$</th>
+<th style="text-align:center">第 $i$ 个处理器的有用计算时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$t_o^i$</td>
+<td style="text-align:center">第 $i$ 个处理器的额外开销时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$T_p = t_e^i + t_o^i = (T_e + T_o) / p$</td>
+<td style="text-align:center">处理器并行算法运行时间</td>
+</tr>
+<tr>
+<td style="text-align:center">$W = T_e = \sum\limits_{i=0} ^{p-1} t_e^i$</td>
+<td style="text-align:center">问题规模, 工作负载, 最佳串行算法所完成计算量</td>
+</tr>
+<tr>
+<td style="text-align:center">$S = \frac{T_e}{T_p} = \frac{p}{1+\frac{T_o}{W}}$</td>
+<td style="text-align:center">加速</td>
+</tr>
+<tr>
+<td style="text-align:center">$E=\frac{S}{p} = \frac{1}{1+\frac{T_o}{W}}$</td>
+<td style="text-align:center">效率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>为了维持 $E$​ 不变, 需在增大 $p$​ 的同时增大 $W = f_E(p)$​</p>
+<p>若 $W$ 随 $p$ 线性或亚线性增长, 则算法具有良好的可扩放性.</p>
+<p>若 $W$ 随 $p$ 指数等快速增长, 则算法不可扩放.</p>
+<h4 id="等速度度量标准"><a href="#等速度度量标准" class="headerlink" title="等速度度量标准"></a>等速度度量标准</h4><p>速度能以处理器数的增加而线性增加(平均速度不变), 则可扩放性好.</p>
+<p>速度 $V = W / T$</p>
+<p>平均速度 $\bar{V} = \frac{V}{p} = \frac{W}{pT}$​</p>
+<p>定义标准 $\Psi(p,p’) = \frac{W/p}{W’/p’}\in(0,1)$​​, 越大可扩放性越好.</p>
+<p>若平均速度保持不变, $\Psi = T/T’$</p>
+<p>$\Psi(1,p’) = \frac{T_1}{T_p’}=\frac{W}{W’/p’} = \frac{解决工作量为 W 的问题所需串行时间}{解决工作量为 W 的问题所需并行时间}$</p>
+<h4 id="平均延迟度量标准"><a href="#平均延迟度量标准" class="headerlink" title="平均延迟度量标准"></a>平均延迟度量标准</h4><p>$T_i$: $p_i$ 的执行时间, 包括运行时导致的延迟 $L_i$</p>
+<p>定义系统平均延迟时间 $\bar{L}(W,p) = \sum\limits_{i=1}^p(T_{para} - T_i + L_i) / p = T_{para} - T_{series} / p$</p>
+<p>定义标准 $\Phi(E,p,p’)=\frac{$\bar{L}(W,p)}{$\bar{L}(W’,p’)} \in (0,1)$, 越大可扩放性越好.</p>
 ]]></content>
       <categories>
-        <category>configuration</category>
+        <category>lecture notes</category>
       </categories>
   </entry>
   <entry>
@@ -334,6 +440,42 @@
 <h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
 <h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区仙林大道163号南大和园</p>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100304.jpg" style="zoom:20%;" /></p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>花津浦</title>
+    <url>/2021/10/01/huajinpu/</url>
+    <content><![CDATA[<p>2021.10.1</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
+<center>烤切片牛舌 38元</center>
+
+<center>烤鸡腿肉 9*2元</center>
+
+<center>原味烤牛肉 29元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
+<center>冰淇淋烤布蕾 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
+<center>烤羊肉串 6*2元</center>
+
+<center>生菜 4元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
+<center>拌翡翠海藻 10元</center>
+
+<center>总价140元 人均70元 非节假日美团有100-20券</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
+<p>国庆快乐.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
 ]]></content>
       <categories>
         <category>Restaurants</category>
@@ -473,42 +615,6 @@
 ]]></content>
       <categories>
         <category>casual writing</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>花津浦</title>
-    <url>/2021/10/01/huajinpu/</url>
-    <content><![CDATA[<p>2021.10.1</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
-<center>烤切片牛舌 38元</center>
-
-<center>烤鸡腿肉 9*2元</center>
-
-<center>原味烤牛肉 29元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
-<center>冰淇淋烤布蕾 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
-<center>烤羊肉串 6*2元</center>
-
-<center>生菜 4元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
-<center>拌翡翠海藻 10元</center>
-
-<center>总价140元 人均70元 非节假日美团有100-20券</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
-<p>国庆快乐.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
