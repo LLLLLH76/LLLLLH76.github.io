@@ -28,8 +28,13 @@
 <meta property="og:description" content="Note for Control Theory">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101602.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101601.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101603.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101604.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101605.png">
 <meta property="article:published_time" content="2021-09-13T11:57:06.000Z">
-<meta property="article:modified_time" content="2021-09-30T03:05:57.605Z">
+<meta property="article:modified_time" content="2021-10-16T03:02:46.541Z">
 <meta property="article:author" content="LLH">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png">
@@ -216,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-30 11:05:57" itemprop="dateModified" datetime="2021-09-30T11:05:57+08:00">2021-09-30</time>
+                <time title="Modified: 2021-10-16 11:02:46" itemprop="dateModified" datetime="2021-10-16T11:02:46+08:00">2021-10-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -372,6 +377,111 @@
 <h2 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h2><h3 id="2-6"><a href="#2-6" class="headerlink" title="2-6"></a>2-6</h3><p>(a) $r(t)$ 为单位阶跃函数, $R(s) = L(r(t)) = \frac{1}{s}, Y(s) = \frac{4(s+50)}{s(s^2 + 30s + 200)} = \frac{1}{s} - \frac{8}{5} \frac{1}{s+10} + \frac{3}{5}\frac{1}{s+20}$</p>
 <p>​     $y(t) = L^{-1}(Y(s)) = 1 - \frac{8}{5} e^{-10t} + \frac{3}{5} e^{-20t}$</p>
 <p>(b) 由题意 $\lim_{t\rightarrow \infty} y(t)$​ 存在, $y(t)$​ 存在拉氏变换</p>
+<h1 id="Lecture-X"><a href="#Lecture-X" class="headerlink" title="Lecture X"></a>Lecture X</h1><p>二阶系统的时域响应性能分析</p>
+<p>$G(s)=\frac{\omega_n^2}{s(s+2\zeta\omega_n)},~H(s)=1$</p>
+<p>$\Phi(s) = \frac{G}{1+GH} = \frac{\omega_n^2}{s^2 + 2\zeta \omega_ns+\omega_n^2}$</p>
+<p>梦开始的地方, 可见二阶系统由2个参数决定: $\zeta,~\omega$</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">symbol</th>
+<th style="text-align:center">CHN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center">阻尼系数, 阻尼比</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega_n$</td>
+<td style="text-align:center">系统固有频率, 自然振荡频率</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sigma = \zeta\omega_n$</td>
+<td style="text-align:center">衰减系数, 负的实部</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega_d = \omega_n \sqrt{1-\zeta^2}$</td>
+<td style="text-align:center">阻尼频率, 虚部</td>
+</tr>
+<tr>
+<td style="text-align:center">$\frac{\zeta}{\sqrt{1-\zeta^2}}$</td>
+<td style="text-align:center">根实部虚部之比</td>
+</tr>
+<tr>
+<td style="text-align:center">$\beta=\arctan{\frac{\sqrt{1-\zeta^2}}{\zeta}}$</td>
+<td style="text-align:center">阻尼角</td>
+</tr>
+<tr>
+<td style="text-align:center">T=$\frac{1}{\zeta\omega_n}$</td>
+<td style="text-align:center">广义时间常数</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>$\zeta \in$</p>
+<ul>
+<li>(0,1):       <strong>欠阻尼系统, 重点</strong> </li>
+<li>{1}:          临界阻尼系统</li>
+<li>(1, $+\infty$​​): 过阻尼系统</li>
+<li>{0}:          零阻尼系统</li>
+<li>($-\infty$​, 0): 负阻尼系统</li>
+</ul>
+<p>以下讨论欠阻尼系统</p>
+<p>$s^2 + 2\zeta \omega_ns+\omega_n^2 = 0$​​​, 极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$​​</p>
+<p>一对共轭复根​​​</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101602.png" alt=""></p>
+<p>单位阶跃响应 $Y(s) = \frac{1}{s}\cdot\Phi(s)$</p>
+<p>$y(t) = 1 - e^{-\zeta\omega_nt} [\cos(\sqrt{1-\zeta^2} \omega_nt) + \frac{\zeta}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2} \omega_nt)] = 1 - \frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\beta)$​</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101601.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101603.png" alt=""></p>
+<ul>
+<li><p>零稳态误差: $\lim_{t\rightarrow\infty}y(t)=1$</p>
+</li>
+<li><p>上升时间 $t_r$: 令 $\sin = 0$ 得 $t_r = \frac{\pi-\beta}{\omega_d}$ </p>
+</li>
+<li><p>峰值时间 $t_p$: 令 $\frac{dy(t)}{dt}=0$ 得 $\tan(\omega_dt+\beta) = \frac{\omega_d}{\zeta\omega_n} = \tan(\beta)~\Rightarrow ~\omega_dt_p=n\pi=\pi$ 得 $t_p = \frac{\pi}{\omega_d}$</p>
+</li>
+<li><p>超调量 P.O. $y(t_p) = 1+e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}},~y(\infty)=1,~P.O.=e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}} \cdot 100\%$, <strong>由$\zeta$唯一决定</strong></p>
+<p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
+</li>
+</ul>
+<ul>
+<li>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$<ul>
+<li>5% 准则, $\delta=5\%,~t_s\approx3T$</li>
+<li>2% 准则, $\delta=2\%,~t_s\approx4T$</li>
+<li>若精确计算, 当 $\omega_n$ 一定, $\zeta=0.707~(\beta = \pi/2)$ 时 $t_s$ 最小. $\zeta$ 一定时, 固有频率 $\omega_n$ 越大则 $t_s$ 越小.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101604.png" alt=""></p>
+<ul>
+<li>等阻尼线, $\beta$ 线, P.O.线</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101605.png" alt=""></p>
+<p>​       线上系统的 P.O. 都相同, $\beta$ 越大的线, 实虚比例越小, P.O.越大.</p>
+<ul>
+<li>等 $\omega_n$ 线: 以原点的中心, $\omega_n$ 为半径的圆, 圆上点 $\omega_n$ 都相等</li>
+</ul>
+<ul>
+<li>等 $t_s$ 线: 竖直线, 越左, 实部越小, $\zeta\omega_n$ 越大, $t_s$ 越小</li>
+<li>等 $t_p$ 线: 水平线, 离原点越远, 虚部越大, $t_p$ 越小</li>
+</ul>
 
     </div>
 
@@ -469,7 +579,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-3"><span class="nav-number">3.</span> <span class="nav-text">Lecture 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW3"><span class="nav-number">3.1.</span> <span class="nav-text">HW3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6"><span class="nav-number">3.1.1.</span> <span class="nav-text">2-6</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-3"><span class="nav-number">3.</span> <span class="nav-text">Lecture 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW3"><span class="nav-number">3.1.</span> <span class="nav-text">HW3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6"><span class="nav-number">3.1.1.</span> <span class="nav-text">2-6</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-X"><span class="nav-number">4.</span> <span class="nav-text">Lecture X</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
