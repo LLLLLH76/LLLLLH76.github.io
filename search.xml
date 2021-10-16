@@ -138,7 +138,7 @@
 <h1 id="Lecture-X"><a href="#Lecture-X" class="headerlink" title="Lecture X"></a>Lecture X</h1><p>二阶系统的时域响应性能分析</p>
 <p>$G(s)=\frac{\omega_n^2}{s(s+2\zeta\omega_n)},~H(s)=1$</p>
 <p>$\Phi(s) = \frac{G}{1+GH} = \frac{\omega_n^2}{s^2 + 2\zeta \omega_ns+\omega_n^2}$</p>
-<p>梦开始的地方, 可见二阶系统由2个参数决定: $\zeta,~\omega$</p>
+<p>梦开始的地方, 可见二阶系统由2个参数决定: $\zeta,~\omega_n$</p>
 <div class="table-container">
 <table>
 <thead>
@@ -539,6 +539,27 @@
       </categories>
   </entry>
   <entry>
+    <title>戴小姐披萨店</title>
+    <url>/2021/10/03/daixiaojie/</url>
+    <content><![CDATA[<p>2021.10.3</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100301.jpg" style="zoom:10%;" /></p>
+<center>薯条 12元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100302.jpg" style="zoom:10%;" /></p>
+<center>海苔鳗鱼披萨 60元</center>
+
+<center>总价72元 人均36元</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>装修风格不错, 明亮整洁, 但是在一楼用餐时会有小虫子</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区仙林大道163号南大和园</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100304.jpg" style="zoom:20%;" /></p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
     <title>花津浦</title>
     <url>/2021/10/01/huajinpu/</url>
     <content><![CDATA[<p>2021.10.1</p>
@@ -569,27 +590,6 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
 <p>国庆快乐.</p>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>戴小姐披萨店</title>
-    <url>/2021/10/03/daixiaojie/</url>
-    <content><![CDATA[<p>2021.10.3</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100301.jpg" style="zoom:10%;" /></p>
-<center>薯条 12元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100302.jpg" style="zoom:10%;" /></p>
-<center>海苔鳗鱼披萨 60元</center>
-
-<center>总价72元 人均36元</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>装修风格不错, 明亮整洁, 但是在一楼用餐时会有小虫子</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区仙林大道163号南大和园</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100304.jpg" style="zoom:20%;" /></p>
 ]]></content>
       <categories>
         <category>Restaurants</category>
