@@ -348,25 +348,6 @@
       </categories>
   </entry>
   <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
@@ -397,6 +378,54 @@
 ]]></content>
       <categories>
         <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>初试类魂游戏</title>
+    <url>/2021/09/14/NIOH/</url>
+    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
+<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
+<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
+<p>算了, 以后有时间再来挑战吧.</p>
+]]></content>
+      <categories>
+        <category>casual writing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -704,35 +733,6 @@
 ]]></content>
       <categories>
         <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
-<hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>初试类魂游戏</title>
-    <url>/2021/09/14/NIOH/</url>
-    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
-<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
-<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
-<p>算了, 以后有时间再来挑战吧.</p>
-]]></content>
-      <categories>
-        <category>casual writing</category>
       </categories>
   </entry>
   <entry>
