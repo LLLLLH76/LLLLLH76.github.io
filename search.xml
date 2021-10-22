@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>DSP note</title>
+    <url>/2021/09/13/DSP_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
+<ul>
+<li><p>时间为自变量</p>
+<ul>
+<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
+</li>
+<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>模拟信号 </p>
+<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
+<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
+<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
+<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
+<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
+<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
+<p>FFT: Fast Fourier Transformation</p>
+<p>时域: 以时间为自变量描述信号和系统</p>
+<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
+<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
+<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
+<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
+<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Control Theory note</title>
     <url>/2021/09/13/Control_Theory_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>控制: 使受控对象产生预期相应 (按照预期方式工作).</p>
@@ -236,13 +269,13 @@
 <ul>
 <li><p>额外闭环零点</p>
 <p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{s+z}{z}\right)$</p>
-<p><img src="" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102201.png" style="zoom:67%;" /></p>
 <p>增加了微分环节, 波动增强</p>
 <p>$y’(t) = 1 - y(t) + \frac{\omega_n}{z}\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2}\omega_n t)$</p>
 </li>
 <li><p>额外闭环极点</p>
 <p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{p}{s+p}\right)$</p>
-<p><img src="" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102202.png" style="zoom:67%;" /></p>
 <p>增加了积分环节, 波动减弱. 其中 $p$ 对瞬态行为的影响可以忽略</p>
 <blockquote>
 <p>上述 $z,~p$ 的作用是 $s\rightarrow0 (t\rightarrow\infty)$ 时系统相应不变</p>
@@ -262,9 +295,10 @@
 </ul>
 <p>只有负实部的点可以消, 且要保持系统静态增益不变</p>
 <p>eg. $\frac{Y(s)}{R(s)} = \frac{s+20.03}{(s+20)(s+100)(…)}\approx\frac{1}{(s+100)(…)}\approx\frac{1}{100(…)}$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102203.png" style="zoom:67%;" /></p>
 <hr>
 <p>稳态性能分析</p>
-<p><img src="" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102204.png" style="zoom:67%;" /></p>
 <div class="table-container">
 <table>
 <thead>
@@ -360,39 +394,6 @@
 <p>Solution: a path</p>
 <hr>
 <p><strong>complexity</strong></p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>DSP note</title>
-    <url>/2021/09/13/DSP_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
-<ul>
-<li><p>时间为自变量</p>
-<ul>
-<li><p>连续信号 $x(t)$​ -&gt; 模拟信号: 取值也连续​</p>
-</li>
-<li><p>离散信号 $x[n]$​ -&gt; 数字信号: 取值也离散</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>模拟信号 </p>
-<p>—&gt;(信号采样) 抽样信号, $t$​ 由连续变为离散 </p>
-<p>—&gt;(数值量化)  数字信号, 取值由连续变为离散, 只有一些固定点上有取值 (000, 001, 010, …)</p>
-<p>—&gt;(零阶保持)  量化信号, $t$​​​ 由离散恢复为连续, 取值依然离散 (把点用线段连起来?)</p>
-<p>—&gt;(低通滤波)  模拟信号, 取值恢复为连续</p>
-<p>确定信号: 信号随时间变化服从确定规律, 能够以确定时间函数表示.</p>
-<p>系统的输入(激励), 输出(响应)都是信号(函数), 对信号进行加工, 变换.</p>
-<p>FFT: Fast Fourier Transformation</p>
-<p>时域: 以时间为自变量描述信号和系统</p>
-<p>空域: 以空间为自变量描述信号和系统 (图片)</p>
-<p>频域: 以频率为自变量描述信号和系统. 如果不以频率为基本单位, 也成为变换域.</p>
-<p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
-<p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
-<p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
 ]]></content>
       <categories>
         <category>lecture notes</category>
@@ -756,6 +757,42 @@
       </categories>
   </entry>
   <entry>
+    <title>花津浦</title>
+    <url>/2021/10/01/huajinpu/</url>
+    <content><![CDATA[<p>2021.10.1</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
+<center>烤切片牛舌 38元</center>
+
+<center>烤鸡腿肉 9*2元</center>
+
+<center>原味烤牛肉 29元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
+<center>冰淇淋烤布蕾 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
+<center>烤羊肉串 6*2元</center>
+
+<center>生菜 4元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
+<center>拌翡翠海藻 10元</center>
+
+<center>总价140元 人均70元 非节假日美团有100-20券</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
+<p>国庆快乐.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
     <title>带啥?</title>
     <url>/2021/09/20/luggage/</url>
     <content><![CDATA[<h3 id="2021-9-回校"><a href="#2021-9-回校" class="headerlink" title="2021.9 回校"></a>2021.9 回校</h3><div class="table-container">
@@ -892,42 +929,6 @@
       </categories>
   </entry>
   <entry>
-    <title>花津浦</title>
-    <url>/2021/10/01/huajinpu/</url>
-    <content><![CDATA[<p>2021.10.1</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
-<center>烤切片牛舌 38元</center>
-
-<center>烤鸡腿肉 9*2元</center>
-
-<center>原味烤牛肉 29元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
-<center>冰淇淋烤布蕾 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
-<center>烤羊肉串 6*2元</center>
-
-<center>生菜 4元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
-<center>拌翡翠海藻 10元</center>
-
-<center>总价140元 人均70元 非节假日美团有100-20券</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
-<p>国庆快乐.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
     <title>山水一方</title>
     <url>/2021/09/20/shanshuiyifang/</url>
     <content><![CDATA[<p>2021.9.20</p>
@@ -956,6 +957,48 @@
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092002.jpg" style="zoom:7%;" /></p>
 <p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21092001.jpg" style="zoom:15%;" /></p>
 <p>中秋快乐.</p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>中华茶楼</title>
+    <url>/2021/09/15/zhonghuachalou/</url>
+    <content><![CDATA[<p>2021.9.15</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
+<center>凤爪 23元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
+<center>牛仔骨 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
+<center>虾饺 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
+<center>葡挞 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
+<center>榴莲酥 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
+<center>乳鸽 72元 2只</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
+<center>马拉糕 15元</center>
+
+<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
+<center>自取点心</center>
+
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
+<center> 蓝色楼顶那里 </center>
+
 ]]></content>
       <categories>
         <category>Restaurants</category>
@@ -1045,48 +1088,6 @@
 ]]></content>
       <categories>
         <category>record</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>中华茶楼</title>
-    <url>/2021/09/15/zhonghuachalou/</url>
-    <content><![CDATA[<p>2021.9.15</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
-<center>凤爪 23元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
-<center>牛仔骨 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
-<center>虾饺 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
-<center>葡挞 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
-<center>榴莲酥 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
-<center>乳鸽 72元 2只</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
-<center>马拉糕 15元</center>
-
-<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
-<center>自取点心</center>
-
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
-<center> 蓝色楼顶那里 </center>
-
-]]></content>
-      <categories>
-        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
