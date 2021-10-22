@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101604.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101605.png">
 <meta property="article:published_time" content="2021-09-13T11:57:06.000Z">
-<meta property="article:modified_time" content="2021-10-16T03:06:14.104Z">
+<meta property="article:modified_time" content="2021-10-22T07:30:27.093Z">
 <meta property="article:author" content="LLH">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-16 11:06:14" itemprop="dateModified" datetime="2021-10-16T11:06:14+08:00">2021-10-16</time>
+                <time title="Modified: 2021-10-22 15:30:27" itemprop="dateModified" datetime="2021-10-22T15:30:27+08:00">2021-10-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -354,8 +354,8 @@
 <p>$F(s)$ 的零点: 使分子 $B(s) = 0$ 的根​</p>
 <ol>
 <li>$F(s)$ 只有不同的实数极点 $F(s) = \sum\limits _{i=1} ^n \frac{A_i}{s+p_i} \Rightarrow L^{-1}[F(s)] = \sum\limits _{i=1} ^n L^{-1} [\frac{A_i}{s+p_i}] = \sum\limits _{i=1} ^n A_i e^{-p_i t}$ </li>
-<li>$F(s)$​​ 有共轭复数极点 </li>
-<li>$F(s)$​ 有重极点</li>
+<li>$F(s)$​​ 有共轭复数极点 $\frac{s+1}{s(s^2+s+1)} = \frac{A}{s} + \frac{Bs+C}{s^2+s+1}$</li>
+<li>$F(s)$ 有重极点 $\frac{s+3}{(s+2)^2(s+1)} = \frac{A}{(s+2)^2}+\frac{B}{(s+2)} + \frac{C}{s+1}$</li>
 </ol>
 <p>用拉氏变换求微分方程</p>
 <ol>
@@ -447,9 +447,8 @@
 <li><p>超调量 P.O. $y(t_p) = 1+e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}},~y(\infty)=1,~P.O.=e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}} \cdot 100\%$, <strong>由$\zeta$唯一决定</strong></p>
 <p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
 </li>
-</ul>
+<li><p>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$</p>
 <ul>
-<li>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$<ul>
 <li>5% 准则, $\delta=5\%,~t_s\approx3T$</li>
 <li>2% 准则, $\delta=2\%,~t_s\approx4T$</li>
 <li>若精确计算, 当 $\omega_n$ 一定, $\zeta=0.707~(\beta = \pi/2)$ 时 $t_s$ 最小. $\zeta$ 一定时, 固有频率 $\omega_n$ 越大则 $t_s$ 越小.</li>
@@ -471,6 +470,119 @@
 <li>等 $t_s$ 线: 竖直线, 越左, 实部越小, $\zeta\omega_n$ 越大, $t_s$ 越小</li>
 <li>等 $t_p$ 线: 水平线, 离原点越远, 虚部越大, $t_p$ 越小</li>
 </ul>
+<h1 id="Lecture-X-1"><a href="#Lecture-X-1" class="headerlink" title="Lecture X+1"></a>Lecture X+1</h1><p>高阶系统</p>
+<p>瞬态响应由一些一阶惯性环节和二阶振荡环节的响应函数叠加组成的.</p>
+<p>当所有闭环极点均具有负实部时, 系统稳定.</p>
+<hr>
+<p>研究高阶 (二阶系统的有限扩展)</p>
+<ul>
+<li><p>额外闭环零点</p>
+<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{s+z}{z}\right)$</p>
+<p><img src="" alt=""></p>
+<p>增加了微分环节, 波动增强</p>
+<p>$y’(t) = 1 - y(t) + \frac{\omega_n}{z}\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2}\omega_n t)$</p>
+</li>
+<li><p>额外闭环极点</p>
+<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{p}{s+p}\right)$</p>
+<p><img src="" alt=""></p>
+<p>增加了积分环节, 波动减弱. 其中 $p$ 对瞬态行为的影响可以忽略</p>
+<blockquote>
+<p>上述 $z,~p$ 的作用是 $s\rightarrow0 (t\rightarrow\infty)$ 时系统相应不变</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>高阶的简化</p>
+<ul>
+<li><p>忽略非主导极点</p>
+<p>主导极点: 靠近虚轴且附近没有零点的极点, 实部为 $\zeta\omega_n$</p>
+<p>可以忽略实部为 $N\zeta\omega_n~(N\ge0)$ 的远端极点</p>
+</li>
+<li><p>偶极子相消</p>
+<p>一极点与一零点之间的距离 &lt; 它们本身到原点距离的 1/10, 可以消掉 (太阳是原点, 消掉海王星及其卫星)</p>
+</li>
+</ul>
+<p>只有负实部的点可以消, 且要保持系统静态增益不变</p>
+<p>eg. $\frac{Y(s)}{R(s)} = \frac{s+20.03}{(s+20)(s+100)(…)}\approx\frac{1}{(s+100)(…)}\approx\frac{1}{100(…)}$</p>
+<hr>
+<p>稳态性能分析</p>
+<p><img src="" alt=""></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$X_i(s)$</th>
+<th style="text-align:center">系统输入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$X_o(s)$</td>
+<td style="text-align:center">实际系统输出</td>
+</tr>
+<tr>
+<td style="text-align:center">$X_{oi}(s)$</td>
+<td style="text-align:center">理想系统输出</td>
+</tr>
+<tr>
+<td style="text-align:center">$N(s)$</td>
+<td style="text-align:center">干扰</td>
+</tr>
+<tr>
+<td style="text-align:center">$E(s) = X_{oi}(s) - X_{o}(s)$</td>
+<td style="text-align:center">误差, 理想输出和实际输出之差</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon(s) = X_{i}(s) - H(s)X_o(S)$</td>
+<td style="text-align:center">偏差, 系统输入信号与反馈信号之差</td>
+</tr>
+<tr>
+<td style="text-align:center">$e_{ss} = \lim_{t\rightarrow\infty} e(t)$</td>
+<td style="text-align:center">稳态误差</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon_{ss} = \lim_{t\rightarrow\infty} \epsilon(t)$</td>
+<td style="text-align:center">稳态偏差</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>$\frac{X_o(s)}{X_i(s)} = \frac{G}{1+GH}$</p>
+<p>当 $GH&gt;&gt;1,~\frac{X_o(s)}{X_i(s)} \approx \frac{1}{H}$</p>
+<p>$X_{oi}(s) = \frac{1}{H} X_i(s)$</p>
+<p>$E(s) = X_{oi}(s) - X_{o}(s) =\frac{1}{H} X_i(s) - \frac{HX_o(S)}{H} = \frac{\epsilon(s)}{H}$</p>
+<p>若已知 $H$, 可由稳态偏差求得稳态误差.</p>
+<p>偏差传递函数 $\frac{\epsilon(s)}{X_i(s)} = \frac{1}{1+GH}$</p>
+<p>稳态误差 $e_{ss}=\frac{\epsilon_{ss}}{H(0)} = \frac{1}{H}\lim_{s\rightarrow0}s\cdot\epsilon(s) = \frac{1}{H}\lim_{s\rightarrow0}s\cdot \frac{X_i(s)}{1+GH}$ 取决于系统参数与输入信号</p>
+<hr>
+<p>系统的型次</p>
+<p>重写系统开环传递函数 $G(s)H(s) = \frac{K(\tau_1s+1)(\tau_2s+1)…}{s^\lambda(T_1s+1)(T_2s+1)…}$</p>
+<p>$\lambda=0/1/2:$ 0 / I / II 型系统</p>
+<ul>
+<li><p>静态位置误差系数 </p>
+<p>$K_p = \lim_{s\rightarrow0}G(s)H(s)=G(0)H(0)$</p>
+<p>对<strong>单位阶跃输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s} = \frac{1}{1+G(0)H(0)} = \frac{1}{1+K_p}$</p>
+<p>0  型系统 $K_p = K,~\epsilon_{ss}=\frac{1}{1+K}$</p>
+<p>I,II型系统 $K_p = \infty,~\epsilon_{ss}=\frac{1}{1+\infty}=0$</p>
+</li>
+<li><p>静态速度误差系数</p>
+<p>$K_v = \lim_{s\rightarrow0}s\cdot G(s)H(s)$</p>
+<p>对<strong>单位斜坡输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^2} = \lim_{s\rightarrow0}\frac{1}{sG(s)H(s)} = \frac{1}{K_v}$</p>
+<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>I  型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
+<p>II 型系统 $K_v = \infty,~\epsilon_{ss}=0$</p>
+</li>
+<li><p>静态加速度误差系数</p>
+<p>$K_a = \lim_{s\rightarrow0}s^2\cdot G(s)H(s)$</p>
+<p>对<strong>单位加速度输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^3} = \lim_{s\rightarrow0}\frac{1}{s^2G(s)H(s)} = \frac{1}{K_a}$</p>
+<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>I  型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>II 型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
+<p>|      | 单位阶跃 | 单位斜坡 | 单位加速度 |<br>| :——: | :————: | :————: | :—————: |<br>| 0 型 | $\frac{1}{1+K}$ | $\infty$ | $\infty$ |<br>| I 型 | 0 | $\frac{1}{K}$ | $\infty$ |<br>| II 型 | 0 | 0 | $\frac{1}{K}$ |</p>
+</li>
+</ul>
+<p>增大 $K$, 可<strong>减小</strong>输入引起的稳态误差</p>
+<p>提高型次, 可以<strong>消除</strong>输入引起的稳态误差</p>
 
     </div>
 
@@ -568,7 +680,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-3"><span class="nav-number">3.</span> <span class="nav-text">Lecture 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW3"><span class="nav-number">3.1.</span> <span class="nav-text">HW3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6"><span class="nav-number">3.1.1.</span> <span class="nav-text">2-6</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-X"><span class="nav-number">4.</span> <span class="nav-text">Lecture X</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-1"><span class="nav-number">1.</span> <span class="nav-text">Lecture 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW-1"><span class="nav-number">1.1.</span> <span class="nav-text">HW 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1-1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1-2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-2"><span class="nav-number">2.</span> <span class="nav-text">Lecture 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-3"><span class="nav-number">3.</span> <span class="nav-text">Lecture 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HW3"><span class="nav-number">3.1.</span> <span class="nav-text">HW3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6"><span class="nav-number">3.1.1.</span> <span class="nav-text">2-6</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-X"><span class="nav-number">4.</span> <span class="nav-text">Lecture X</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lecture-X-1"><span class="nav-number">5.</span> <span class="nav-text">Lecture X+1</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

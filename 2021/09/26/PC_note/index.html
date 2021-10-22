@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093008.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093009.png">
 <meta property="article:published_time" content="2021-09-26T11:57:00.000Z">
-<meta property="article:modified_time" content="2021-10-13T08:36:54.449Z">
+<meta property="article:modified_time" content="2021-10-20T06:03:14.218Z">
 <meta property="article:author" content="LLH">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093001.png">
@@ -226,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-13 16:36:54" itemprop="dateModified" datetime="2021-10-13T16:36:54+08:00">2021-10-13</time>
+                <time title="Modified: 2021-10-20 14:03:14" itemprop="dateModified" datetime="2021-10-20T14:03:14+08:00">2021-10-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -465,6 +465,90 @@
 <p>$T_{EREW} \ge T_{CREW} \ge T_{CRCW} $</p>
 <p>$T_{EREW} = O (T_{CREW}) \cdot \log p = O (T_{CRCW}) \cdot \log p$</p>
 <p>EREW 是最慢的</p>
+<h3 id="APRAM"><a href="#APRAM" class="headerlink" title="APRAM"></a>APRAM</h3><p>异步 Asynchronous PRAM</p>
+<p>每个处理器都有局存, 局部时钟和局部程序. 通过共享全局存储通信.</p>
+<p>无全局时钟, 各处理器<strong>异步独立</strong>执行各自指令</p>
+<p>时间依赖关系需明确在各程序中加入<strong>同步路障</strong></p>
+<p>指令:</p>
+<ul>
+<li>全局读: 全局存储-&gt;读入-&gt;局存</li>
+<li>局部操作: 计算, 改写局存</li>
+<li>全局写: 局存-&gt;写入-&gt;全局存储</li>
+<li>同步: 等待别的处理器到达</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">p1</th>
+<th style="text-align:center">p2</th>
+<th style="text-align:center">pn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">phase1</td>
+<td style="text-align:center">read x1</td>
+<td style="text-align:center">read x3</td>
+<td style="text-align:center">read xn</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">read x2</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">*</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">write to B</td>
+<td style="text-align:center">*</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">write to A</td>
+<td style="text-align:center">write to C</td>
+<td style="text-align:center">write to D</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">同步障</td>
+<td style="text-align:center">同步障</td>
+<td style="text-align:center">同步障</td>
+</tr>
+<tr>
+<td style="text-align:center">phase2</td>
+<td style="text-align:center">read B</td>
+<td style="text-align:center">read A</td>
+<td style="text-align:center">read C</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">同步障</td>
+<td style="text-align:center">同步障</td>
+<td style="text-align:center">同步障</td>
+</tr>
+<tr>
+<td style="text-align:center">phase3</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>$T = \Sigma ~每个~phase~的小霸王时间 + 同步障时间~ B \times 同步障次数 $</p>
+<h3 id="BSP"><a href="#BSP" class="headerlink" title="BSP"></a>BSP</h3><p>Bulk Synchronous Parallel</p>
+<p>计算由一系列用全局同步分开, 周期为 L 的超级步组成</p>
+<p>各超级步中每个处理器执行局部计算, 并通过选路器接发信息. 然后作一全局检查看是否所有处理器都已完成.</p>
+<p>分布存储的 MIMD</p>
 
     </div>
 
@@ -562,7 +646,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.1.</span> <span class="nav-text">静态互连网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.2.</span> <span class="nav-text">动态互连网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E6%AF%94"><span class="nav-number">4.1.</span> <span class="nav-text">加速比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Amdahl-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">Amdahl 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gustafson-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">Gustafson 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sun-and-Ni-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.3.</span> <span class="nav-text">Sun and Ni 定律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E6%89%A9%E6%94%BE%E6%80%A7"><span class="nav-number">4.2.</span> <span class="nav-text">可扩放性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E7%8E%87%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.1.</span> <span class="nav-text">等效率度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E9%80%9F%E5%BA%A6%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.2.</span> <span class="nav-text">等速度度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E5%BB%B6%E8%BF%9F%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.3.</span> <span class="nav-text">平均延迟度量标准</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PRAM"><span class="nav-number">5.1.</span> <span class="nav-text">PRAM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-EREW"><span class="nav-number">5.1.1.</span> <span class="nav-text">PRAM-EREW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-CREW"><span class="nav-number">5.1.2.</span> <span class="nav-text">PRAM-CREW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-CRCW"><span class="nav-number">5.1.3.</span> <span class="nav-text">PRAM-CRCW</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.1.</span> <span class="nav-text">静态互连网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E4%BA%92%E8%BF%9E%E7%BD%91%E7%BB%9C"><span class="nav-number">2.2.</span> <span class="nav-text">动态互连网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E6%AF%94"><span class="nav-number">4.1.</span> <span class="nav-text">加速比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Amdahl-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">Amdahl 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gustafson-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">Gustafson 定律</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sun-and-Ni-%E5%AE%9A%E5%BE%8B"><span class="nav-number">4.1.3.</span> <span class="nav-text">Sun and Ni 定律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E6%89%A9%E6%94%BE%E6%80%A7"><span class="nav-number">4.2.</span> <span class="nav-text">可扩放性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E6%95%88%E7%8E%87%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.1.</span> <span class="nav-text">等效率度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E9%80%9F%E5%BA%A6%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.2.</span> <span class="nav-text">等速度度量标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E5%BB%B6%E8%BF%9F%E5%BA%A6%E9%87%8F%E6%A0%87%E5%87%86"><span class="nav-number">4.2.3.</span> <span class="nav-text">平均延迟度量标准</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PRAM"><span class="nav-number">5.1.</span> <span class="nav-text">PRAM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-EREW"><span class="nav-number">5.1.1.</span> <span class="nav-text">PRAM-EREW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-CREW"><span class="nav-number">5.1.2.</span> <span class="nav-text">PRAM-CREW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PRAM-CRCW"><span class="nav-number">5.1.3.</span> <span class="nav-text">PRAM-CRCW</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APRAM"><span class="nav-number">5.2.</span> <span class="nav-text">APRAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BSP"><span class="nav-number">5.3.</span> <span class="nav-text">BSP</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
