@@ -348,15 +348,22 @@
       </categories>
   </entry>
   <entry>
-    <title>初试类魂游戏</title>
-    <url>/2021/09/14/NIOH/</url>
-    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
-<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
-<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
-<p>算了, 以后有时间再来挑战吧.</p>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
 ]]></content>
       <categories>
-        <category>casual writing</category>
+        <category>lecture notes</category>
       </categories>
   </entry>
   <entry>
@@ -387,25 +394,6 @@
 <p>频谱: 信号的频域表示, 描述信号各个频率分量的幅度和相位.</p>
 <p>滤波器: 一种信号处理系统, 实现按照一定目的对信号的变换/过滤 (过滤频率)</p>
 <p>时域 ~~ 傅里叶变换 ~~ 频域 (从频率角度提取特征)</p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
 ]]></content>
       <categories>
         <category>lecture notes</category>
@@ -736,6 +724,18 @@
       </categories>
   </entry>
   <entry>
+    <title>初试类魂游戏</title>
+    <url>/2021/09/14/NIOH/</url>
+    <content><![CDATA[<h3 id="9-15"><a href="#9-15" class="headerlink" title="9.15"></a>9.15</h3><p>昨天的塔顶两阶段boss一遍过.</p>
+<h3 id="9-14"><a href="#9-14" class="headerlink" title="9.14"></a>9.14</h3><p>今天 EPIC 送了仁王, 一开始觉得很好玩, 小兵两刀一个, 后来遇到盔甲兵, 死了快十次, 终于打过了, 来到一个塔顶打boss, 几刀把他砍翻了, 结果黑化来个二阶段, 一刀把我砍死了, 又要重新砍小兵, 砍盔甲兵…</p>
+<p>不得不说类魂游戏确实很有魅力, 身处压抑而宏大的氛围, 慢慢探索, 慢慢进步, 重复着观察-&gt;砍一刀-&gt;闪避-&gt;砍一刀-&gt;闪避-&gt;贪刀-&gt;被一刀砍死的过程, 让玩家的神经处于高度紧绷而亢奋的状态, 非常上头. 然而说难听的就是找虐?? 打了大半天, 一点失误直接白给?</p>
+<p>算了, 以后有时间再来挑战吧.</p>
+]]></content>
+      <categories>
+        <category>casual writing</category>
+      </categories>
+  </entry>
+  <entry>
     <title>戴小姐披萨店</title>
     <url>/2021/10/03/daixiaojie/</url>
     <content><![CDATA[<p>2021.10.3</p>
@@ -963,48 +963,6 @@
       </categories>
   </entry>
   <entry>
-    <title>中华茶楼</title>
-    <url>/2021/09/15/zhonghuachalou/</url>
-    <content><![CDATA[<p>2021.9.15</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
-<center>凤爪 23元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
-<center>牛仔骨 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
-<center>虾饺 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
-<center>葡挞 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
-<center>榴莲酥 20元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
-<center>乳鸽 72元 2只</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
-<center>马拉糕 15元</center>
-
-<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
-<center>自取点心</center>
-
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
-<center> 蓝色楼顶那里 </center>
-
-]]></content>
-      <categories>
-        <category>Restaurants</category>
-      </categories>
-  </entry>
-  <entry>
     <title>高中摘抄</title>
     <url>/2019/09/01/zhaichao/</url>
     <content><![CDATA[<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="9-7"><a href="#9-7" class="headerlink" title="9.7"></a>9.7</h3><p>汗牛充栋: 形容书籍多, 不能形容其他东西</p>
@@ -1088,6 +1046,48 @@
 ]]></content>
       <categories>
         <category>record</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>中华茶楼</title>
+    <url>/2021/09/15/zhonghuachalou/</url>
+    <content><![CDATA[<p>2021.9.15</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091502.jpg" style="zoom: 10%;" /></p>
+<center>凤爪 23元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091503.jpg" style="zoom: 10%;" /></p>
+<center>牛仔骨 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091504.jpg" style="zoom: 10%;" /></p>
+<center>虾饺 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091505.jpg" style="zoom: 10%;" /></p>
+<center>葡挞 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091506.jpg" style="zoom: 10%;" /></p>
+<center>榴莲酥 20元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091507.jpg" style="zoom: 10%;" /></p>
+<center>乳鸽 72元 2只</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091508.jpg" style="zoom: 10%;" /></p>
+<center>马拉糕 15元</center>
+
+<center>外加5*3茶味费和未知费用, 每月第三个星期四五九折, 总价 255 * 0.59 = 150 元, 人均 50 元.</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>客人较多时比较拥挤, 送餐车会占住整条走廊, 而且比较嘈杂, 和旁边人交流也要提起嗓门, 如果是多人大圆桌, 几乎听不到桌子对面的人说话.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>今天比较幸运, 1730来到不用排队, 上一次中午排了一个多小时. 大部分点心可凭每桌的点餐卡直接自取, 但其他菜品也需凭点餐卡下单, 下单到菜上桌期间没有点餐卡, 无法自取点心.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091509.jpg" style="zoom: 10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091510.jpg" style="zoom: 10%;" /></p>
+<center>自取点心</center>
+
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>肇庆市端州区棠岗路星湖尚景苑二期东城汇二楼(星湖东门牌坊直行800米)</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091501.jpg" style="zoom: 15%;" /></p>
+<center> 蓝色楼顶那里 </center>
+
+]]></content>
+      <categories>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
