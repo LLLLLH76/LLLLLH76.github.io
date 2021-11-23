@@ -1,381 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Control Theory note</title>
-    <url>/2021/09/13/Control_Theory_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>控制: 使受控对象产生预期相应 (按照预期方式工作).</p>
-<p>输入(激励) —&gt; 输出(相应)</p>
-<p>自动控制: 无人参与情况下, 利用控制装置使受控对象的某一受控变量自动按照预定规律运行.</p>
-<p>受控对象: 要求实现自动工作的机器, 设备或生产过程. 有多个受控变量.</p>
-<ul>
-<li><p>开环控制: 利用执行机构直接控制受控对象, 信息单向流动</p>
-<ul>
-<li>控制量 $u(t)$ —&gt; 执行机构(油门, 方向盘) —&gt; 受控对象 —&gt; 输出 $y(t)$​</li>
-</ul>
-</li>
-<li><p>闭环控制: 有反馈过程, 信息双向流动</p>
-<ul>
-<li><p>预期输入 $r(t)$ —&gt; 比较器 —&gt; 误差$e(t)$ —&gt; 控制器 —&gt; 控制量$u(t)$ —&gt; 受控对象 —&gt; 实际输出 $y(t)$</p>
-<p>​                                    $\uparrow$​​ &lt;———- 测量值 &lt;———- 测量装置 &lt;———- 被测变量 &lt;———- $\downarrow$​​</p>
-</li>
-</ul>
-<h2 id="HW-1"><a href="#HW-1" class="headerlink" title="HW 1"></a>HW 1</h2></li>
-</ul>
-<h3 id="1-1"><a href="#1-1" class="headerlink" title="1-1"></a>1-1</h3><ul>
-<li>输出变量: 激光器的实际输出功率</li>
-<li>输入变量: 激光器预期输出的功率</li>
-<li>待测变量: 传感器测量得到的, 与激光器的实际输出功率成比例的信号</li>
-<li>控制装置: 微处理器</li>
-</ul>
-<h3 id="1-2"><a href="#1-2" class="headerlink" title="1-2"></a>1-2</h3><p>…</p>
-<h1 id="Lecture-2"><a href="#Lecture-2" class="headerlink" title="Lecture 2"></a>Lecture 2</h1><ul>
-<li>经典控制理论: 传递函数</li>
-<li>现代控制理论: 状态空间方程</li>
-</ul>
-<p>都要微分方程</p>
-<ul>
-<li>时间域: 微分/差分方程, 状态方程</li>
-<li>复数域: 传递函数, 结构图</li>
-<li>频率域: 频率特性函数</li>
-</ul>
-<p>微分方程模型:</p>
-<ul>
-<li>确定输入量, 输出量</li>
-<li>根据设定写方程</li>
-<li>消除中间量, 保留输入, 输出</li>
-<li>标准化: 等式右边/左边与输入/输出变量有关</li>
-</ul>
-<p>线性定常(时不变): 系数不变</p>
-<p>线性系统:</p>
-<ul>
-<li>叠加性: $ y(x_1+x_2) = y(x_1) + y(x_2)$</li>
-<li>齐次性: $y(\beta x ) = \beta y(x)$</li>
-</ul>
-<p>一般$n$​阶线性定常微分方程模型: $y(t)$ 为输出, $r(t)$ 为输入, $m&lt;n$, $a,b$ 均为实数, 为系统参数</p>
-<p>$a_0 \frac{d^n}{dt^n}y(t) + a_1 \frac{d^{n-1}}{dt^{n-1}}y(t) + \cdots + a_{n-1} \frac{d^{}}{dt^{}}y(t) + a_n y_t = b_0 \frac{d^m}{dt^m}r(t) + b_1 \frac{d^{m-1}}{dt^{m-1}}r(t) + \cdots + b_{m-1} \frac{d^{}}{dt^{}}r(t) + b_m r_t $​</p>
-<p>建立线性化近似模型策略:</p>
-<ol>
-<li>限制范围, 使系统工作在线性区, 忽略非线性. $y = \frac{dy}{dx}|_{x_0} x$​</li>
-<li>小信号 : 泰勒展开</li>
-</ol>
-<hr>
-<p>时间域 $f(t)$ —&gt; 傅立叶变换  —&gt; 频率域 $F(\omega)$​ —&gt; 傅立叶反变换 —&gt; $f(t)$​</p>
-<p>傅立叶变换: $F(\omega) = \int _{-\infty} ^ {+\infty} e^{-j\omega t} f(t)dt$</p>
-<p>拉普拉斯变换: $L(s) = \int _{0} ^ {+\infty} e^{-(\sigma + j \omega ) t} f(t)dt$​, 复数 $s = \sigma + j \omega$​</p>
-<p>$F(s) = L(f(t)) = \int _0 ^\infty f(t)e^{-st}dt$ </p>
-<p>拉氏变换可理解为广义单边傅立叶变换, 是线性变换</p>
-<p>$F(s)$​ 为 $f(t)$ 的拉氏变换或象函数, $f(t)$ 为 $F(s)$​ 的原函数, 一一对应. </p>
-<ul>
-<li>指数函数: $f(t) = Ae^{-at} \rightarrow L(f(t)) = \frac{A}{s+a}$, 极点 $s = -a$</li>
-<li>单位阶跃函数: $0,1 \rightarrow \frac{1}{s}$, 极点 $s = 0$</li>
-<li>斜坡函数: $ At \rightarrow \frac{A}{s^2}$, 极点 $s_{1,2} = 0$</li>
-<li>幂函数: $ t^n \rightarrow   \frac{n!}{s^{n+1}}$​</li>
-<li>正弦函数: $\sin \omega t  \rightarrow \frac{\omega}{s^2 + \omega^2}$ , 极点 $s_{1,2} = \pm j \omega$</li>
-<li>余弦函数: $ \cos \omega t \rightarrow \frac{s}{s^2 + \omega^2}$​ , 极点 $s_{1,2} = \pm j \omega$</li>
-<li>单位脉冲函数: $\lim\limits_{\epsilon \rightarrow 0} \frac{1}{\epsilon} \rightarrow 1$</li>
-</ul>
-<p>五大定理</p>
-<ul>
-<li>位移定理<ul>
-<li>时间 $t$​​ 平移 $L[f(t-a)] = e^{-as}F(s)$</li>
-<li>频率域 $s$​​​ 平移 $L[f(t)e^{-at}] = F(s+a)$</li>
-<li>时间 $t$​​ 尺度变换 $L[f(\frac{t}{a})] = aF(as)$</li>
-</ul>
-</li>
-<li><strong>微分定理</strong><ul>
-<li>$L[\frac{d}{dt} f(t)] = sF(s) - f(0)$​</li>
-<li>$L[\frac{d^2}{dt^2} f(t)] = s^2F(s) - sf(0)- f’(0)$</li>
-<li>$L[\frac{d^n}{dt^n} f(t)] = s^nF(s) - s^{n-1}f(0) - \cdots -sf^{(n-2)}(0) - f^{(n-1)}(0)$​</li>
-<li>零初始条件 $L[\frac{d^n}{dt^n} f(t)] = s^nF(s)$</li>
-</ul>
-</li>
-<li>积分定理<ul>
-<li>$L(\int f(t)dt) = \frac{F(s)}{s} + \frac{f^{-1}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
-<li>$L(\int \int f(t)dt) = \frac{F(s)}{s^2} + \frac{f^{-1}(0)}{s^2} + \frac{f^{-2}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
-<li>零初始条件 $L[\int\int\cdots\int f(t)dt^n] = \frac{F(s)}{s^n}$</li>
-</ul>
-</li>
-<li><strong>终值定理</strong><ul>
-<li>$\lim\limits_{t\rightarrow\infty} = \lim_\limits{s\rightarrow0}sF(s)$</li>
-</ul>
-</li>
-<li>初值定理<ul>
-<li>$\lim\limits_{t \rightarrow 0} f(t) = \lim\limits_{s \rightarrow \infty} sF(s) $​</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png" alt=""></p>
-<h1 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h1><p>拉氏反变换 $f(t) = L^{-1} [F(s)]$</p>
-<p>可将 $F(s)$​ 分解为典型函数的叠加 $L^{-1}[F(s)] = L^{-1}[F_1(s)] + L^{-1}[F_2(s)] + … +L^{-1}[F_n(s)]$​</p>
-<p> 通常 $F(s) = \frac{B(s)}{A(s)} =\frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{c_{0}s^{m} + c_{1}s^{m-1} + … + c_{m-1}s^{} + c_{m}}{(s+p_1)(s+p_2)…(s+p_n)} $</p>
-<p>$F(s)$ 的极点: 使分母 $A(s) = 0$ 的根​</p>
-<p>$F(s)$ 的零点: 使分子 $B(s) = 0$ 的根​</p>
-<ol>
-<li>$F(s)$ 只有不同的实数极点 $F(s) = \sum\limits _{i=1} ^n \frac{A_i}{s+p_i} \Rightarrow L^{-1}[F(s)] = \sum\limits _{i=1} ^n L^{-1} [\frac{A_i}{s+p_i}] = \sum\limits _{i=1} ^n A_i e^{-p_i t}$ </li>
-<li>$F(s)$​​ 有共轭复数极点 $\frac{s+1}{s(s^2+s+1)} = \frac{A}{s} + \frac{Bs+C}{s^2+s+1}$</li>
-<li>$F(s)$ 有重极点 $\frac{s+3}{(s+2)^2(s+1)} = \frac{A}{(s+2)^2}+\frac{B}{(s+2)} + \frac{C}{s+1}$</li>
-</ol>
-<p>用拉氏变换求微分方程</p>
-<ol>
-<li>将方程通过拉氏变换变为 $s$ 的代数方程</li>
-<li>解代数方程得到 $F(s)$</li>
-<li>反变换回时域解 $f(t)$</li>
-</ol>
-<p>受控变量运动模态取决于其变换函数 $Y(s)$​ 的极点(分母多项式方程的根)</p>
-<ul>
-<li>$s = -a \Leftrightarrow e^{-at}$</li>
-<li>$s = \pm j \omega \Leftrightarrow \sin(\omega t)$</li>
-</ul>
-<p>传递函数: 在0初始条件下, 系统输出量的拉氏变换与输入量拉氏变换的比值</p>
-<p>只适用于线性定常系统</p>
-<p>$G(s) = \frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{M(s)}{N(s)}$​</p>
-<p>$n \ge m$, 系数均为实数</p>
-<p>放大系数(增益): $G(0) = \frac{b_m}{a_n} = K$</p>
-<p>$N(s) = 0$ 称为系统的特征方程, 其根为系统的特征根, $s$ 的最高阶次等于系统的阶次</p>
-<h2 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h2><h3 id="2-6"><a href="#2-6" class="headerlink" title="2-6"></a>2-6</h3><p>(a) $r(t)$ 为单位阶跃函数, $R(s) = L(r(t)) = \frac{1}{s}, Y(s) = \frac{4(s+50)}{s(s^2 + 30s + 200)} = \frac{1}{s} - \frac{8}{5} \frac{1}{s+10} + \frac{3}{5}\frac{1}{s+20}$</p>
-<p>​     $y(t) = L^{-1}(Y(s)) = 1 - \frac{8}{5} e^{-10t} + \frac{3}{5} e^{-20t}$</p>
-<p>(b) 由题意 $\lim_{t\rightarrow \infty} y(t)$​ 存在, $y(t)$​ 存在拉氏变换</p>
-<h1 id="Lecture-X"><a href="#Lecture-X" class="headerlink" title="Lecture X"></a>Lecture X</h1><p>二阶系统的时域响应性能分析</p>
-<p>$G(s)=\frac{\omega_n^2}{s(s+2\zeta\omega_n)},~H(s)=1$</p>
-<p>$\Phi(s) = \frac{G}{1+GH} = \frac{\omega_n^2}{s^2 + 2\zeta \omega_ns+\omega_n^2}$</p>
-<p>梦开始的地方, 可见二阶系统由2个参数决定: $\zeta,~\omega_n$</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">symbol</th>
-<th style="text-align:center">CHN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$\zeta$</td>
-<td style="text-align:center">阻尼系数, 阻尼比</td>
-</tr>
-<tr>
-<td style="text-align:center">$\omega_n$</td>
-<td style="text-align:center">系统固有频率, 自然振荡频率</td>
-</tr>
-<tr>
-<td style="text-align:center">$\sigma = \zeta\omega_n$</td>
-<td style="text-align:center">衰减系数, 负的实部</td>
-</tr>
-<tr>
-<td style="text-align:center">$\omega_d = \omega_n \sqrt{1-\zeta^2}$</td>
-<td style="text-align:center">阻尼频率, 虚部</td>
-</tr>
-<tr>
-<td style="text-align:center">$\frac{\zeta}{\sqrt{1-\zeta^2}}$</td>
-<td style="text-align:center">根实部虚部之比</td>
-</tr>
-<tr>
-<td style="text-align:center">$\beta=\arctan{\frac{\sqrt{1-\zeta^2}}{\zeta}}$</td>
-<td style="text-align:center">阻尼角</td>
-</tr>
-<tr>
-<td style="text-align:center">T=$\frac{1}{\zeta\omega_n}$</td>
-<td style="text-align:center">广义时间常数</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>$\zeta \in$</p>
-<ul>
-<li>(0,1):       <strong>欠阻尼系统, 重点</strong> </li>
-<li>{1}:          临界阻尼系统</li>
-<li>(1, $+\infty$​​): 过阻尼系统</li>
-<li>{0}:          零阻尼系统</li>
-<li>($-\infty$​, 0): 负阻尼系统</li>
-</ul>
-<p>以下讨论欠阻尼系统</p>
-<p>$s^2 + 2\zeta \omega_ns+\omega_n^2 = 0$​​​, 极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$​​</p>
-<p>一对共轭复根​​​</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101602.png" alt=""></p>
-<p>单位阶跃响应 $Y(s) = \frac{1}{s}\cdot\Phi(s)$</p>
-<p>$y(t) = 1 - e^{-\zeta\omega_nt} [\cos(\sqrt{1-\zeta^2} \omega_nt) + \frac{\zeta}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2} \omega_nt)] = 1 - \frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\beta)$​</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101601.png" style="zoom: 67%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101603.png" style="zoom:67%;" /></p>
-<ul>
-<li><p>零稳态误差: $\lim_{t\rightarrow\infty}y(t)=1$</p>
-</li>
-<li><p>上升时间 $t_r$: 令 $\sin = 0$ 得 $t_r = \frac{\pi-\beta}{\omega_d}$ </p>
-</li>
-<li><p>峰值时间 $t_p$: 令 $\frac{dy(t)}{dt}=0$ 得 $\tan(\omega_dt+\beta) = \frac{\omega_d}{\zeta\omega_n} = \tan(\beta)~\Rightarrow ~\omega_dt_p=n\pi=\pi$ 得 $t_p = \frac{\pi}{\omega_d}$</p>
-</li>
-<li><p>超调量 P.O. $y(t_p) = 1+e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}},~y(\infty)=1,~P.O.=e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}} \cdot 100\%$, <strong>由$\zeta$唯一决定</strong></p>
-<p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
-</li>
-<li><p>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$</p>
-<ul>
-<li>5% 准则, $\delta=5\%,~t_s\approx3T$</li>
-<li>2% 准则, $\delta=2\%,~t_s\approx4T$</li>
-<li>若精确计算, 当 $\omega_n$ 一定, $\zeta=0.707~(\beta = \pi/2)$ 时 $t_s$ 最小. $\zeta$ 一定时, 固有频率 $\omega_n$ 越大则 $t_s$ 越小.</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101604.png" style="zoom:50%;" /></p>
-<ul>
-<li>等阻尼线, $\beta$ 线, P.O.线</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101605.png" style="zoom:33%;" /></p>
-<p>​       线上系统的 P.O. 都相同, $\beta$ 越大的线, 实虚比例越小, P.O.越大.</p>
-<ul>
-<li>等 $\omega_n$ 线: 以原点的中心, $\omega_n$ 为半径的圆, 圆上点 $\omega_n$ 都相等</li>
-</ul>
-<ul>
-<li>等 $t_s$ 线: 竖直线, 越左, 实部越小, $\zeta\omega_n$ 越大, $t_s$ 越小</li>
-<li>等 $t_p$ 线: 水平线, 离原点越远, 虚部越大, $t_p$ 越小</li>
-</ul>
-<h1 id="Lecture-X-1"><a href="#Lecture-X-1" class="headerlink" title="Lecture X+1"></a>Lecture X+1</h1><p>高阶系统</p>
-<p>瞬态响应由一些一阶惯性环节和二阶振荡环节的响应函数叠加组成的.</p>
-<p>当所有闭环极点均具有负实部时, 系统稳定.</p>
-<hr>
-<p>研究高阶 (二阶系统的有限扩展)</p>
-<ul>
-<li><p>额外闭环零点</p>
-<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{s+z}{z}\right)$</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102201.png" style="zoom:67%;" /></p>
-<p>增加了微分环节, 波动增强</p>
-<p>$y’(t) = 1 - y(t) + \frac{\omega_n}{z}\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2}\omega_n t)$</p>
-</li>
-<li><p>额外闭环极点</p>
-<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{p}{s+p}\right)$</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102202.png" style="zoom:67%;" /></p>
-<p>增加了积分环节, 波动减弱. 其中 $p$ 对瞬态行为的影响可以忽略</p>
-<blockquote>
-<p>上述 $z,~p$ 的作用是 $s\rightarrow0 (t\rightarrow\infty)$ 时系统相应不变</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<p>高阶的简化</p>
-<ul>
-<li><p>忽略非主导极点</p>
-<p>主导极点: 靠近虚轴且附近没有零点的极点, 实部为 $\zeta\omega_n$</p>
-<p>可以忽略实部为 $N\zeta\omega_n~(N\ge0)$ 的远端极点</p>
-</li>
-<li><p>偶极子相消</p>
-<p>一极点与一零点之间的距离 &lt; 它们本身到原点距离的 1/10, 可以消掉 (太阳是原点, 消掉海王星及其卫星)</p>
-</li>
-</ul>
-<p>只有负实部的点可以消, 且要保持系统静态增益不变</p>
-<p>eg. $\frac{Y(s)}{R(s)} = \frac{s+20.03}{(s+20)(s+100)(…)}\approx\frac{1}{(s+100)(…)}\approx\frac{1}{100(…)}$</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102203.png" style="zoom:67%;" /></p>
-<hr>
-<p>稳态性能分析</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102204.png" style="zoom:67%;" /></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$X_i(s)$</th>
-<th style="text-align:center">系统输入</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$X_o(s)$</td>
-<td style="text-align:center">实际系统输出</td>
-</tr>
-<tr>
-<td style="text-align:center">$X_{oi}(s)$</td>
-<td style="text-align:center">理想系统输出</td>
-</tr>
-<tr>
-<td style="text-align:center">$N(s)$</td>
-<td style="text-align:center">干扰</td>
-</tr>
-<tr>
-<td style="text-align:center">$E(s) = X_{oi}(s) - X_{o}(s)$</td>
-<td style="text-align:center">误差, 理想输出和实际输出之差</td>
-</tr>
-<tr>
-<td style="text-align:center">$\epsilon(s) = X_{i}(s) - H(s)X_o(S)$</td>
-<td style="text-align:center">偏差, 系统输入信号与反馈信号之差</td>
-</tr>
-<tr>
-<td style="text-align:center">$e_{ss} = \lim_{t\rightarrow\infty} e(t)$</td>
-<td style="text-align:center">稳态误差</td>
-</tr>
-<tr>
-<td style="text-align:center">$\epsilon_{ss} = \lim_{t\rightarrow\infty} \epsilon(t)$</td>
-<td style="text-align:center">稳态偏差</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>$\frac{X_o(s)}{X_i(s)} = \frac{G}{1+GH}$</p>
-<p>当 $GH&gt;&gt;1,~\frac{X_o(s)}{X_i(s)} \approx \frac{1}{H}$</p>
-<p>$X_{oi}(s) = \frac{1}{H} X_i(s)$</p>
-<p>$E(s) = X_{oi}(s) - X_{o}(s) =\frac{1}{H} X_i(s) - \frac{HX_o(S)}{H} = \frac{\epsilon(s)}{H}$</p>
-<p>若已知 $H$, 可由稳态偏差求得稳态误差.</p>
-<p>单位负反馈: 偏差 = 误差</p>
-<p>系统误差由<strong>输入</strong>与<strong>干扰</strong>引起的误差造成.</p>
-<p>可利用叠加原理直接相加二者求出系统误差.</p>
-<hr>
-<p>输入引起的稳态误差</p>
-<p><strong>偏差传递函数 $\frac{\epsilon(s)}{X_i(s)} = \frac{1}{1+GH}$</strong></p>
-<p>稳态误差 $e_{ss}=\frac{\epsilon_{ss}}{H(0)}$</p>
-<p>$ = \frac{1}{H(0)}\lim_{s\rightarrow0}s\cdot\epsilon(s) = \frac{1}{H(0)}\lim_{s\rightarrow0}s\cdot \frac{X_i(s)}{1+GH}$ </p>
-<p>取决于系统参数与输入信号</p>
-<p>计算方法:</p>
-<ul>
-<li>根据系统型次快速得到</li>
-<li>利用偏差传递函数+终值定理</li>
-</ul>
-<hr>
-<p>干扰引起的稳态误差</p>
-<p><strong>干扰传递函数</strong> $\frac{X_o(s)}{N(s)} = \frac{G_2}{1+G_1G_2H}$</p>
-<p><strong>干扰偏差传递函数</strong> $\frac{\epsilon(s)}{N(s)} = \frac{-G_2H}{1+G_1G_2H}$</p>
-<p>计算方法:</p>
-<ul>
-<li>利用干扰偏差传递函数</li>
-</ul>
-<p>增大 $G_1$ 的增益或是添加积分环节可以消除干扰误差.</p>
-<hr>
-<p>系统的型次</p>
-<p>重写系统开环传递函数 $G(s)H(s) = \frac{K(\tau_1s+1)(\tau_2s+1)…}{s^\lambda(T_1s+1)(T_2s+1)…}$</p>
-<p>$\lambda=0/1/2:$ 0 / I / II 型系统</p>
-<ul>
-<li><p>静态位置误差系数 </p>
-<p>$K_p = \lim_{s\rightarrow0}G(s)H(s)=G(0)H(0)$</p>
-<p>对<strong>单位阶跃输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s} = \frac{1}{1+G(0)H(0)} = \frac{1}{1+K_p}$</p>
-<p>0  型系统 $K_p = K,~\epsilon_{ss}=\frac{1}{1+K}$</p>
-<p>I,II型系统 $K_p = \infty,~\epsilon_{ss}=\frac{1}{1+\infty}=0$</p>
-</li>
-<li><p>静态速度误差系数</p>
-<p>$K_v = \lim_{s\rightarrow0}s\cdot G(s)H(s)$</p>
-<p>对<strong>单位斜坡输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^2} = \lim_{s\rightarrow0}\frac{1}{sG(s)H(s)} = \frac{1}{K_v}$</p>
-<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
-<p>I  型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
-<p>II 型系统 $K_v = \infty,~\epsilon_{ss}=0$</p>
-</li>
-<li><p>静态加速度误差系数</p>
-<p>$K_a = \lim_{s\rightarrow0}s^2\cdot G(s)H(s)$</p>
-<p>对<strong>单位加速度输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^3} = \lim_{s\rightarrow0}\frac{1}{s^2G(s)H(s)} = \frac{1}{K_a}$</p>
-<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
-<p>I  型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
-<p>II 型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
-<p>| ? | 单位阶跃 | 单位斜坡 | 单位加速度 |<br>| :——: | :——: | :——: | :——: |<br>| 0 型 | $\frac{1}{1+K}$ | $\infty$ | $\infty$ |<br>| I 型 | 0 | $\frac{1}{K}$ | $\infty$ |<br>| II 型 | 0 | 0 | $\frac{1}{K}$ |</p>
-</li>
-</ul>
-<p>增大 $K$, 可<strong>减小</strong>输入引起的稳态误差</p>
-<p>提高型次, 可以<strong>消除</strong>输入引起的稳态误差</p>
-<h1 id="Lecture-X-2"><a href="#Lecture-X-2" class="headerlink" title="Lecture X+2"></a>Lecture X+2</h1><p>BIBO 稳定性</p>
-<p>Bounded Input Bounded Output?</p>
-<p>$|r(t)|_{t\rightarrow\infty} &lt; \infty \rightarrow |y(t)|_{t\rightarrow\infty} &lt; \infty$</p>
-<p>系统固有属性, 与输入无关.</p>
-<p>稳定充要条件: 所有闭环极点都在左半平面.</p>
-<p>若虚轴有极点, 则临界稳定</p>
-<p>若右平面有极点, 则不稳定</p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
     <title>DSP note</title>
     <url>/2021/09/13/DSP_note/</url>
     <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>信号是信息的载体, 信号 ~ 函数</p>
@@ -747,23 +372,6 @@
       </categories>
   </entry>
   <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
-<hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
     <title>戴小姐披萨店</title>
     <url>/2021/10/03/daixiaojie/</url>
     <content><![CDATA[<p>2021.10.3</p>
@@ -785,39 +393,20 @@
       </categories>
   </entry>
   <entry>
-    <title>花津浦</title>
-    <url>/2021/10/01/huajinpu/</url>
-    <content><![CDATA[<p>2021.10.1</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
-<center>烤切片牛舌 38元</center>
-
-<center>烤鸡腿肉 9*2元</center>
-
-<center>原味烤牛肉 29元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
-<center>冰淇淋烤布蕾 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
-<center>烤羊肉串 6*2元</center>
-
-<center>生菜 4元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
-<center>拌翡翠海藻 10元</center>
-
-<center>总价140元 人均70元 非节假日美团有100-20券</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
-<p>国庆快乐.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
 ]]></content>
       <categories>
-        <category>Restaurants</category>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -954,6 +543,42 @@
 ]]></content>
       <categories>
         <category>casual writing</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>花津浦</title>
+    <url>/2021/10/01/huajinpu/</url>
+    <content><![CDATA[<p>2021.10.1</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
+<center>烤切片牛舌 38元</center>
+
+<center>烤鸡腿肉 9*2元</center>
+
+<center>原味烤牛肉 29元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
+<center>冰淇淋烤布蕾 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
+<center>烤羊肉串 6*2元</center>
+
+<center>生菜 4元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
+<center>拌翡翠海藻 10元</center>
+
+<center>总价140元 人均70元 非节假日美团有100-20券</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
+<p>国庆快乐.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
+]]></content>
+      <categories>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
@@ -1116,6 +741,406 @@
 ]]></content>
       <categories>
         <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Control Theory note</title>
+    <url>/2021/09/13/Control_Theory_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>控制: 使受控对象产生预期相应 (按照预期方式工作).</p>
+<p>输入(激励) —&gt; 输出(相应)</p>
+<p>自动控制: 无人参与情况下, 利用控制装置使受控对象的某一受控变量自动按照预定规律运行.</p>
+<p>受控对象: 要求实现自动工作的机器, 设备或生产过程. 有多个受控变量.</p>
+<ul>
+<li><p>开环控制: 利用执行机构直接控制受控对象, 信息单向流动</p>
+<ul>
+<li>控制量 $u(t)$ —&gt; 执行机构(油门, 方向盘) —&gt; 受控对象 —&gt; 输出 $y(t)$​</li>
+</ul>
+</li>
+<li><p>闭环控制: 有反馈过程, 信息双向流动</p>
+<ul>
+<li><p>预期输入 $r(t)$ —&gt; 比较器 —&gt; 误差$e(t)$ —&gt; 控制器 —&gt; 控制量$u(t)$ —&gt; 受控对象 —&gt; 实际输出 $y(t)$</p>
+<p>​                                    $\uparrow$​​ &lt;———- 测量值 &lt;———- 测量装置 &lt;———- 被测变量 &lt;———- $\downarrow$​​</p>
+</li>
+</ul>
+<h2 id="HW-1"><a href="#HW-1" class="headerlink" title="HW 1"></a>HW 1</h2></li>
+</ul>
+<h3 id="1-1"><a href="#1-1" class="headerlink" title="1-1"></a>1-1</h3><ul>
+<li>输出变量: 激光器的实际输出功率</li>
+<li>输入变量: 激光器预期输出的功率</li>
+<li>待测变量: 传感器测量得到的, 与激光器的实际输出功率成比例的信号</li>
+<li>控制装置: 微处理器</li>
+</ul>
+<h3 id="1-2"><a href="#1-2" class="headerlink" title="1-2"></a>1-2</h3><p>…</p>
+<h1 id="Lecture-2"><a href="#Lecture-2" class="headerlink" title="Lecture 2"></a>Lecture 2</h1><ul>
+<li>经典控制理论: 传递函数</li>
+<li>现代控制理论: 状态空间方程</li>
+</ul>
+<p>都要微分方程</p>
+<ul>
+<li>时间域: 微分/差分方程, 状态方程</li>
+<li>复数域: 传递函数, 结构图</li>
+<li>频率域: 频率特性函数</li>
+</ul>
+<p>微分方程模型:</p>
+<ul>
+<li>确定输入量, 输出量</li>
+<li>根据设定写方程</li>
+<li>消除中间量, 保留输入, 输出</li>
+<li>标准化: 等式右边/左边与输入/输出变量有关</li>
+</ul>
+<p>线性定常(时不变): 系数不变</p>
+<p>线性系统:</p>
+<ul>
+<li>叠加性: $ y(x_1+x_2) = y(x_1) + y(x_2)$</li>
+<li>齐次性: $y(\beta x ) = \beta y(x)$</li>
+</ul>
+<p>一般$n$​阶线性定常微分方程模型: $y(t)$ 为输出, $r(t)$ 为输入, $m&lt;n$, $a,b$ 均为实数, 为系统参数</p>
+<p>$a_0 \frac{d^n}{dt^n}y(t) + a_1 \frac{d^{n-1}}{dt^{n-1}}y(t) + \cdots + a_{n-1} \frac{d^{}}{dt^{}}y(t) + a_n y_t = b_0 \frac{d^m}{dt^m}r(t) + b_1 \frac{d^{m-1}}{dt^{m-1}}r(t) + \cdots + b_{m-1} \frac{d^{}}{dt^{}}r(t) + b_m r_t $​</p>
+<p>建立线性化近似模型策略:</p>
+<ol>
+<li>限制范围, 使系统工作在线性区, 忽略非线性. $y = \frac{dy}{dx}|_{x_0} x$​</li>
+<li>小信号 : 泰勒展开</li>
+</ol>
+<hr>
+<p>时间域 $f(t)$ —&gt; 傅立叶变换  —&gt; 频率域 $F(\omega)$​ —&gt; 傅立叶反变换 —&gt; $f(t)$​</p>
+<p>傅立叶变换: $F(\omega) = \int _{-\infty} ^ {+\infty} e^{-j\omega t} f(t)dt$</p>
+<p>拉普拉斯变换: $L(s) = \int _{0} ^ {+\infty} e^{-(\sigma + j \omega ) t} f(t)dt$​, 复数 $s = \sigma + j \omega$​</p>
+<p>$F(s) = L(f(t)) = \int _0 ^\infty f(t)e^{-st}dt$ </p>
+<p>拉氏变换可理解为广义单边傅立叶变换, 是线性变换</p>
+<p>$F(s)$​ 为 $f(t)$ 的拉氏变换或象函数, $f(t)$ 为 $F(s)$​ 的原函数, 一一对应. </p>
+<ul>
+<li>指数函数: $f(t) = Ae^{-at} \rightarrow L(f(t)) = \frac{A}{s+a}$, 极点 $s = -a$</li>
+<li>单位阶跃函数: $0,1 \rightarrow \frac{1}{s}$, 极点 $s = 0$</li>
+<li>斜坡函数: $ At \rightarrow \frac{A}{s^2}$, 极点 $s_{1,2} = 0$</li>
+<li>幂函数: $ t^n \rightarrow   \frac{n!}{s^{n+1}}$​</li>
+<li>正弦函数: $\sin \omega t  \rightarrow \frac{\omega}{s^2 + \omega^2}$ , 极点 $s_{1,2} = \pm j \omega$</li>
+<li>余弦函数: $ \cos \omega t \rightarrow \frac{s}{s^2 + \omega^2}$​ , 极点 $s_{1,2} = \pm j \omega$</li>
+<li>单位脉冲函数: $\lim\limits_{\epsilon \rightarrow 0} \frac{1}{\epsilon} \rightarrow 1$</li>
+</ul>
+<p>五大定理</p>
+<ul>
+<li>位移定理<ul>
+<li>时间 $t$​​ 平移 $L[f(t-a)] = e^{-as}F(s)$</li>
+<li>频率域 $s$​​​ 平移 $L[f(t)e^{-at}] = F(s+a)$</li>
+<li>时间 $t$​​ 尺度变换 $L[f(\frac{t}{a})] = aF(as)$</li>
+</ul>
+</li>
+<li><strong>微分定理</strong><ul>
+<li>$L[\frac{d}{dt} f(t)] = sF(s) - f(0)$​</li>
+<li>$L[\frac{d^2}{dt^2} f(t)] = s^2F(s) - sf(0)- f’(0)$</li>
+<li>$L[\frac{d^n}{dt^n} f(t)] = s^nF(s) - s^{n-1}f(0) - \cdots -sf^{(n-2)}(0) - f^{(n-1)}(0)$​</li>
+<li>零初始条件 $L[\frac{d^n}{dt^n} f(t)] = s^nF(s)$</li>
+</ul>
+</li>
+<li>积分定理<ul>
+<li>$L(\int f(t)dt) = \frac{F(s)}{s} + \frac{f^{-1}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
+<li>$L(\int \int f(t)dt) = \frac{F(s)}{s^2} + \frac{f^{-1}(0)}{s^2} + \frac{f^{-2}(0)}{s},~f^{-1}(0) = \int_{-\infty}^0 f(t)dt$</li>
+<li>零初始条件 $L[\int\int\cdots\int f(t)dt^n] = \frac{F(s)}{s^n}$</li>
+</ul>
+</li>
+<li><strong>终值定理</strong><ul>
+<li>$\lim\limits_{t\rightarrow\infty} = \lim_\limits{s\rightarrow0}sF(s)$</li>
+</ul>
+</li>
+<li>初值定理<ul>
+<li>$\lim\limits_{t \rightarrow 0} f(t) = \lim\limits_{s \rightarrow \infty} sF(s) $​</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/21091701.png" alt=""></p>
+<h1 id="Lecture-3"><a href="#Lecture-3" class="headerlink" title="Lecture 3"></a>Lecture 3</h1><p>拉氏反变换 $f(t) = L^{-1} [F(s)]$</p>
+<p>可将 $F(s)$​ 分解为典型函数的叠加 $L^{-1}[F(s)] = L^{-1}[F_1(s)] + L^{-1}[F_2(s)] + … +L^{-1}[F_n(s)]$​</p>
+<p> 通常 $F(s) = \frac{B(s)}{A(s)} =\frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{c_{0}s^{m} + c_{1}s^{m-1} + … + c_{m-1}s^{} + c_{m}}{(s+p_1)(s+p_2)…(s+p_n)} $</p>
+<p>$F(s)$ 的极点: 使分母 $A(s) = 0$ 的根​</p>
+<p>$F(s)$ 的零点: 使分子 $B(s) = 0$ 的根​</p>
+<ol>
+<li>$F(s)$ 只有不同的实数极点 $F(s) = \sum\limits _{i=1} ^n \frac{A_i}{s+p_i} \Rightarrow L^{-1}[F(s)] = \sum\limits _{i=1} ^n L^{-1} [\frac{A_i}{s+p_i}] = \sum\limits _{i=1} ^n A_i e^{-p_i t}$ </li>
+<li>$F(s)$​​ 有共轭复数极点 $\frac{s+1}{s(s^2+s+1)} = \frac{A}{s} + \frac{Bs+C}{s^2+s+1}$</li>
+<li>$F(s)$ 有重极点 $\frac{s+3}{(s+2)^2(s+1)} = \frac{A}{(s+2)^2}+\frac{B}{(s+2)} + \frac{C}{s+1}$</li>
+</ol>
+<p>用拉氏变换求微分方程</p>
+<ol>
+<li>将方程通过拉氏变换变为 $s$ 的代数方程</li>
+<li>解代数方程得到 $F(s)$</li>
+<li>反变换回时域解 $f(t)$</li>
+</ol>
+<p>受控变量运动模态取决于其变换函数 $Y(s)$​ 的极点(分母多项式方程的根)</p>
+<ul>
+<li>$s = -a \Leftrightarrow e^{-at}$</li>
+<li>$s = \pm j \omega \Leftrightarrow \sin(\omega t)$</li>
+</ul>
+<p>传递函数: 在0初始条件下, 系统输出量的拉氏变换与输入量拉氏变换的比值</p>
+<p>只适用于线性定常系统</p>
+<p>$G(s) = \frac{b_{0}s^{m} + b_{1}s^{m-1} + … + b_{m-1}s^{} + b_{m}}{a_{0}s^{n} + a_{1}s^{n-1} + … + a_{n-1}s^{} + a_{n}} = \frac{M(s)}{N(s)}$​</p>
+<p>$n \ge m$, 系数均为实数</p>
+<p>放大系数(增益): $G(0) = \frac{b_m}{a_n} = K$</p>
+<p>$N(s) = 0$ 称为系统的特征方程, 其根为系统的特征根, $s$ 的最高阶次等于系统的阶次</p>
+<h2 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h2><h3 id="2-6"><a href="#2-6" class="headerlink" title="2-6"></a>2-6</h3><p>(a) $r(t)$ 为单位阶跃函数, $R(s) = L(r(t)) = \frac{1}{s}, Y(s) = \frac{4(s+50)}{s(s^2 + 30s + 200)} = \frac{1}{s} - \frac{8}{5} \frac{1}{s+10} + \frac{3}{5}\frac{1}{s+20}$</p>
+<p>​     $y(t) = L^{-1}(Y(s)) = 1 - \frac{8}{5} e^{-10t} + \frac{3}{5} e^{-20t}$</p>
+<p>(b) 由题意 $\lim_{t\rightarrow \infty} y(t)$​ 存在, $y(t)$​ 存在拉氏变换</p>
+<h1 id="Lecture-X"><a href="#Lecture-X" class="headerlink" title="Lecture X"></a>Lecture X</h1><p>二阶系统的时域响应性能分析</p>
+<p>$G(s)=\frac{\omega_n^2}{s(s+2\zeta\omega_n)},~H(s)=1$</p>
+<p>$\Phi(s) = \frac{G}{1+GH} = \frac{\omega_n^2}{s^2 + 2\zeta \omega_ns+\omega_n^2}$</p>
+<p>梦开始的地方, 可见二阶系统由2个参数决定: $\zeta,~\omega_n$</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">symbol</th>
+<th style="text-align:center">CHN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center">阻尼系数, 阻尼比</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega_n$</td>
+<td style="text-align:center">系统固有频率, 自然振荡频率</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sigma = \zeta\omega_n$</td>
+<td style="text-align:center">衰减系数, 负的实部</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega_d = \omega_n \sqrt{1-\zeta^2}$</td>
+<td style="text-align:center">阻尼频率, 虚部</td>
+</tr>
+<tr>
+<td style="text-align:center">$\frac{\zeta}{\sqrt{1-\zeta^2}}$</td>
+<td style="text-align:center">根实部虚部之比</td>
+</tr>
+<tr>
+<td style="text-align:center">$\beta=\arctan{\frac{\sqrt{1-\zeta^2}}{\zeta}}$</td>
+<td style="text-align:center">阻尼角</td>
+</tr>
+<tr>
+<td style="text-align:center">T=$\frac{1}{\zeta\omega_n}$</td>
+<td style="text-align:center">广义时间常数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>$\zeta \in$</p>
+<ul>
+<li>(0,1):       <strong>欠阻尼系统, 重点</strong> </li>
+<li>{1}:          临界阻尼系统</li>
+<li>(1, $+\infty$​​): 过阻尼系统</li>
+<li>{0}:          零阻尼系统</li>
+<li>($-\infty$​, 0): 负阻尼系统</li>
+</ul>
+<p>以下讨论欠阻尼系统</p>
+<p>$s^2 + 2\zeta \omega_ns+\omega_n^2 = 0$​​​, 极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$​​</p>
+<p>一对共轭复根​​​</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101602.png" alt=""></p>
+<p>单位阶跃响应 $Y(s) = \frac{1}{s}\cdot\Phi(s)$</p>
+<p>$y(t) = 1 - e^{-\zeta\omega_nt} [\cos(\sqrt{1-\zeta^2} \omega_nt) + \frac{\zeta}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2} \omega_nt)] = 1 - \frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\beta)$​</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101601.png" style="zoom: 67%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101603.png" style="zoom:67%;" /></p>
+<ul>
+<li><p>零稳态误差: $\lim_{t\rightarrow\infty}y(t)=1$</p>
+</li>
+<li><p>上升时间 $t_r$: 令 $\sin = 0$ 得 $t_r = \frac{\pi-\beta}{\omega_d}$ </p>
+</li>
+<li><p>峰值时间 $t_p$: 令 $\frac{dy(t)}{dt}=0$ 得 $\tan(\omega_dt+\beta) = \frac{\omega_d}{\zeta\omega_n} = \tan(\beta)~\Rightarrow ~\omega_dt_p=n\pi=\pi$ 得 $t_p = \frac{\pi}{\omega_d}$</p>
+</li>
+<li><p>超调量 P.O. $y(t_p) = 1+e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}},~y(\infty)=1,~P.O.=e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}} \cdot 100\%$, <strong>由$\zeta$唯一决定</strong></p>
+<p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
+</li>
+<li><p>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$</p>
+<ul>
+<li>5% 准则, $\delta=5\%,~t_s\approx3T$</li>
+<li>2% 准则, $\delta=2\%,~t_s\approx4T$</li>
+<li>若精确计算, 当 $\omega_n$ 一定, $\zeta=0.707~(\beta = \pi/2)$ 时 $t_s$ 最小. $\zeta$ 一定时, 固有频率 $\omega_n$ 越大则 $t_s$ 越小.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>极点 $s_{1,2}=-\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}=-\sigma\pm j\omega_d$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101604.png" style="zoom:50%;" /></p>
+<ul>
+<li>等阻尼线, $\beta$ 线, P.O.线</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021101605.png" style="zoom:33%;" /></p>
+<p>​       线上系统的 P.O. 都相同, $\beta$ 越大的线, 实虚比例越小, P.O.越大.</p>
+<ul>
+<li>等 $\omega_n$ 线: 以原点的中心, $\omega_n$ 为半径的圆, 圆上点 $\omega_n$ 都相等</li>
+</ul>
+<ul>
+<li>等 $t_s$ 线: 竖直线, 越左, 实部越小, $\zeta\omega_n$ 越大, $t_s$ 越小</li>
+<li>等 $t_p$ 线: 水平线, 离原点越远, 虚部越大, $t_p$ 越小</li>
+</ul>
+<h1 id="Lecture-X-1"><a href="#Lecture-X-1" class="headerlink" title="Lecture X+1"></a>Lecture X+1</h1><p>高阶系统</p>
+<p>瞬态响应由一些一阶惯性环节和二阶振荡环节的响应函数叠加组成的.</p>
+<p>当所有闭环极点均具有负实部时, 系统稳定.</p>
+<hr>
+<p>研究高阶 (二阶系统的有限扩展)</p>
+<ul>
+<li><p>额外闭环零点</p>
+<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{s+z}{z}\right)$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102201.png" style="zoom:67%;" /></p>
+<p>增加了微分环节, 波动增强</p>
+<p>$y’(t) = 1 - y(t) + \frac{\omega_n}{z}\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\sqrt{1-\zeta^2}\omega_n t)$</p>
+</li>
+<li><p>额外闭环极点</p>
+<p>$\Phi(s) = \frac{\omega_n^2}{s^2+2\zeta\omega_ns+\omega_n^2}\left(\frac{p}{s+p}\right)$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102202.png" style="zoom:67%;" /></p>
+<p>增加了积分环节, 波动减弱. 其中 $p$ 对瞬态行为的影响可以忽略</p>
+<blockquote>
+<p>上述 $z,~p$ 的作用是 $s\rightarrow0 (t\rightarrow\infty)$ 时系统相应不变</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>高阶的简化</p>
+<ul>
+<li><p>忽略非主导极点</p>
+<p>主导极点: 靠近虚轴且附近没有零点的极点, 实部为 $\zeta\omega_n$</p>
+<p>可以忽略实部为 $N\zeta\omega_n~(N\ge0)$ 的远端极点</p>
+</li>
+<li><p>偶极子相消</p>
+<p>一极点与一零点之间的距离 &lt; 它们本身到原点距离的 1/10, 可以消掉 (太阳是原点, 消掉海王星及其卫星)</p>
+</li>
+</ul>
+<p>只有负实部的点可以消, 且要保持系统静态增益不变</p>
+<p>eg. $\frac{Y(s)}{R(s)} = \frac{s+20.03}{(s+20)(s+100)(…)}\approx\frac{1}{(s+100)(…)}\approx\frac{1}{100(…)}$</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102203.png" style="zoom:67%;" /></p>
+<hr>
+<p>稳态性能分析</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021102204.png" style="zoom:67%;" /></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$X_i(s)$</th>
+<th style="text-align:center">系统输入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$X_o(s)$</td>
+<td style="text-align:center">实际系统输出</td>
+</tr>
+<tr>
+<td style="text-align:center">$X_{oi}(s)$</td>
+<td style="text-align:center">理想系统输出</td>
+</tr>
+<tr>
+<td style="text-align:center">$N(s)$</td>
+<td style="text-align:center">干扰</td>
+</tr>
+<tr>
+<td style="text-align:center">$E(s) = X_{oi}(s) - X_{o}(s)$</td>
+<td style="text-align:center">误差, 理想输出和实际输出之差</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon(s) = X_{i}(s) - H(s)X_o(S)$</td>
+<td style="text-align:center">偏差, 系统输入信号与反馈信号之差</td>
+</tr>
+<tr>
+<td style="text-align:center">$e_{ss} = \lim_{t\rightarrow\infty} e(t)$</td>
+<td style="text-align:center">稳态误差</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon_{ss} = \lim_{t\rightarrow\infty} \epsilon(t)$</td>
+<td style="text-align:center">稳态偏差</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>$\frac{X_o(s)}{X_i(s)} = \frac{G}{1+GH}$</p>
+<p>当 $GH&gt;&gt;1,~\frac{X_o(s)}{X_i(s)} \approx \frac{1}{H}$</p>
+<p>$X_{oi}(s) = \frac{1}{H} X_i(s)$</p>
+<p>$E(s) = X_{oi}(s) - X_{o}(s) =\frac{1}{H} X_i(s) - \frac{HX_o(S)}{H} = \frac{\epsilon(s)}{H}$</p>
+<p>若已知 $H$, 可由稳态偏差求得稳态误差.</p>
+<p>单位负反馈: 偏差 = 误差</p>
+<p>系统误差由<strong>输入</strong>与<strong>干扰</strong>引起的误差造成.</p>
+<p>可利用叠加原理直接相加二者求出系统误差.</p>
+<hr>
+<p>输入引起的稳态误差</p>
+<p><strong>偏差传递函数 $\frac{\epsilon(s)}{X_i(s)} = \frac{1}{1+GH}$</strong></p>
+<p>稳态误差 $e_{ss}=\frac{\epsilon_{ss}}{H(0)}$</p>
+<p>$ = \frac{1}{H(0)}\lim_{s\rightarrow0}s\cdot\epsilon(s) = \frac{1}{H(0)}\lim_{s\rightarrow0}s\cdot \frac{X_i(s)}{1+GH}$ </p>
+<p>取决于系统参数与输入信号</p>
+<p>计算方法:</p>
+<ul>
+<li>根据系统型次快速得到</li>
+<li>利用偏差传递函数+终值定理</li>
+</ul>
+<hr>
+<p>干扰引起的稳态误差</p>
+<p><strong>干扰传递函数</strong> $\frac{X_o(s)}{N(s)} = \frac{G_2}{1+G_1G_2H}$</p>
+<p><strong>干扰偏差传递函数</strong> $\frac{\epsilon(s)}{N(s)} = \frac{-G_2H}{1+G_1G_2H}$</p>
+<p>计算方法:</p>
+<ul>
+<li>利用干扰偏差传递函数</li>
+</ul>
+<p>增大 $G_1$ 的增益或是添加积分环节可以消除干扰误差.</p>
+<hr>
+<p>系统的型次</p>
+<p>重写系统开环传递函数 $G(s)H(s) = \frac{K(\tau_1s+1)(\tau_2s+1)…}{s^\lambda(T_1s+1)(T_2s+1)…}$</p>
+<p>$\lambda=0/1/2:$ 0 / I / II 型系统</p>
+<ul>
+<li><p>静态位置误差系数 </p>
+<p>$K_p = \lim_{s\rightarrow0}G(s)H(s)=G(0)H(0)$</p>
+<p>对<strong>单位阶跃输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s} = \frac{1}{1+G(0)H(0)} = \frac{1}{1+K_p}$</p>
+<p>0  型系统 $K_p = K,~\epsilon_{ss}=\frac{1}{1+K}$</p>
+<p>I,II型系统 $K_p = \infty,~\epsilon_{ss}=\frac{1}{1+\infty}=0$</p>
+</li>
+<li><p>静态速度误差系数</p>
+<p>$K_v = \lim_{s\rightarrow0}s\cdot G(s)H(s)$</p>
+<p>对<strong>单位斜坡输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^2} = \lim_{s\rightarrow0}\frac{1}{sG(s)H(s)} = \frac{1}{K_v}$</p>
+<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>I  型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
+<p>II 型系统 $K_v = \infty,~\epsilon_{ss}=0$</p>
+</li>
+<li><p>静态加速度误差系数</p>
+<p>$K_a = \lim_{s\rightarrow0}s^2\cdot G(s)H(s)$</p>
+<p>对<strong>单位加速度输入</strong>, 稳态偏差 $\epsilon_{ss}=\lim_{s\rightarrow0}s\cdot \frac{1}{1+G(s)H(s)} \frac{1}{s^3} = \lim_{s\rightarrow0}\frac{1}{s^2G(s)H(s)} = \frac{1}{K_a}$</p>
+<p>0 型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>I  型系统 $K_v = 0,~\epsilon_{ss}=\infty$</p>
+<p>II 型系统 $K_v = K,~\epsilon_{ss}=\frac{1}{K}$</p>
+<p>| ? | 单位阶跃 | 单位斜坡 | 单位加速度 |<br>| :——: | :——: | :——: | :——: |<br>| 0 型 | $\frac{1}{1+K}$ | $\infty$ | $\infty$ |<br>| I 型 | 0 | $\frac{1}{K}$ | $\infty$ |<br>| II 型 | 0 | 0 | $\frac{1}{K}$ |</p>
+</li>
+</ul>
+<p>增大 $K$, 可<strong>减小</strong>输入引起的稳态误差</p>
+<p>提高型次, 可以<strong>消除</strong>输入引起的稳态误差</p>
+<h1 id="Lecture-X-2"><a href="#Lecture-X-2" class="headerlink" title="Lecture X+2"></a>Lecture X+2</h1><p>BIBO 稳定性</p>
+<p>Bounded Input Bounded Output?</p>
+<p>$|r(t)|_{t\rightarrow\infty} &lt; \infty \rightarrow |y(t)|_{t\rightarrow\infty} &lt; \infty$</p>
+<p>系统固有属性, 与输入无关.</p>
+<p>稳定充要条件: 所有闭环极点都在左半平面.</p>
+<p>若虚轴有极点, 则临界稳定</p>
+<p>若右平面有极点, 则不稳定    </p>
+<h2 id="劳斯-赫尔维茨稳定性判据"><a href="#劳斯-赫尔维茨稳定性判据" class="headerlink" title="劳斯-赫尔维茨稳定性判据"></a>劳斯-赫尔维茨稳定性判据</h2><p>系统的特征多项式: 闭环传递函数的分母 $q(s) = a_{n}s^{n} + a_{n-1}s^{n-1}+\cdots a_{1}s^{} + a_0$</p>
+<p>闭环系统稳定充要条件:</p>
+<ul>
+<li>$a_i &gt; 0$</li>
+<li>劳斯判定表中第一列均为正</li>
+</ul>
+<p>劳斯判定表: 一撇减一捺, 除以左下角</p>
+<ul>
+<li>$q(s) = a_2s^2 + a_1 s + a_0$ : $a_2, a_1,a_0$ 同号</li>
+<li>$q(s) = a_3s^3+a_2s^2 + a_1 s + a_0$ : $a_2a_1&gt;a_3a_0$</li>
+</ul>
+<p>特殊情况:</p>
+<ul>
+<li>有一个元素为0, 用无穷小正数 $\epsilon$ 代替, 继续求, 最后求极限</li>
+<li>全零行, 前一行多项式是 $q(s)$ 的因子, 提取计算</li>
+</ul>
+<h1 id="Lecture-X-3"><a href="#Lecture-X-3" class="headerlink" title="Lecture X+3"></a>Lecture X+3</h1><p>根轨迹图: 以增益 $K$ 为变量, 当 $K:0\rightarrow \infty$, 系统闭环<strong>极点</strong>在 $S$ 平面上变化的轨迹.</p>
+<p>闭环传递函数 = $\frac{KG(s)}{1 + KG(s)H(s)}$</p>
+<p>特征方程 (分母=0): $1 + KG(s)H(s) = 0$</p>
+<p>其中 $KG(s)H(s) = \frac{K(s+z_1)(s+z_2)…}{(s+p_1)(s+p_2)…}$</p>
+<p>eg. $KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s+0.5)}$</p>
+<p>验证 $-1.09\pm j 2.07$ 在根轨迹上:</p>
+<ul>
+<li>相角条件: 判断在不在</li>
+</ul>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
       </categories>
   </entry>
   <entry>
