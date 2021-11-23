@@ -372,6 +372,23 @@
       </categories>
   </entry>
   <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
+      </categories>
+  </entry>
+  <entry>
     <title>戴小姐披萨店</title>
     <url>/2021/10/03/daixiaojie/</url>
     <content><![CDATA[<p>2021.10.3</p>
@@ -393,20 +410,39 @@
       </categories>
   </entry>
   <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
-<hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
+    <title>花津浦</title>
+    <url>/2021/10/01/huajinpu/</url>
+    <content><![CDATA[<p>2021.10.1</p>
+<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
+<center>烤切片牛舌 38元</center>
+
+<center>烤鸡腿肉 9*2元</center>
+
+<center>原味烤牛肉 29元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
+<center>冰淇淋烤布蕾 28元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
+<center>烤羊肉串 6*2元</center>
+
+<center>生菜 4元</center>
+
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
+<center>拌翡翠海藻 10元</center>
+
+<center>总价140元 人均70元 非节假日美团有100-20券</center>
+
+<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
+<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
+<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
+<p>国庆快乐.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
 ]]></content>
       <categories>
-        <category>configuration</category>
+        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
@@ -543,42 +579,6 @@
 ]]></content>
       <categories>
         <category>casual writing</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>花津浦</title>
-    <url>/2021/10/01/huajinpu/</url>
-    <content><![CDATA[<p>2021.10.1</p>
-<h4 id="菜品"><a href="#菜品" class="headerlink" title="菜品"></a>菜品</h4><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100102.jpg" style="zoom:10%;" /></p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100108.jpg" style="zoom:10%;" /></p>
-<center>烤切片牛舌 38元</center>
-
-<center>烤鸡腿肉 9*2元</center>
-
-<center>原味烤牛肉 29元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100107.jpg" style="zoom:10%;" /></p>
-<center>冰淇淋烤布蕾 28元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100103.jpg" style="zoom:10%;" /></p>
-<center>烤羊肉串 6*2元</center>
-
-<center>生菜 4元</center>
-
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100109.jpg" style="zoom:10%;" /></p>
-<center>拌翡翠海藻 10元</center>
-
-<center>总价140元 人均70元 非节假日美团有100-20券</center>
-
-<h4 id="餐厅环境"><a href="#餐厅环境" class="headerlink" title="餐厅环境"></a>餐厅环境</h4><p>比较嘈杂, 布局还可以, 能看到熟菜制作.</p>
-<h4 id="用餐时间"><a href="#用餐时间" class="headerlink" title="用餐时间"></a>用餐时间</h4><p>没有排队, 上菜也很快.</p>
-<h4 id="餐厅位置"><a href="#餐厅位置" class="headerlink" title="餐厅位置"></a>餐厅位置</h4><p>南京市栖霞区学津路与杉湖西路交叉口东北角金鹰湖滨天地2期3F</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100104.jpg" style="zoom:15%;" /></p>
-<p>国庆快乐.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100105.jpg" style="zoom:20%;" /></p>
-]]></content>
-      <categories>
-        <category>Restaurants</category>
       </categories>
   </entry>
   <entry>
@@ -1136,7 +1136,15 @@
 <p>eg. $KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s+0.5)}$</p>
 <p>验证 $-1.09\pm j 2.07$ 在根轨迹上:</p>
 <ul>
-<li>相角条件: 判断在不在</li>
+<li><p>相角条件: 判断在不在</p>
+<p>$+(92.49\degree)-(66.27\degree+78.8\degree+127.53\degree) = -180\degree=180\degree+k360\degree(k=0,\pm1,\pm2…)$</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021112301.png" style="zoom: 50%;" /></p>
+<ul>
+<li><p>幅值条件: 计算此时的 $K$</p>
+<p>$KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s+0.5)}$</p>
+</li>
 </ul>
 ]]></content>
       <categories>
