@@ -34,25 +34,6 @@
       </categories>
   </entry>
   <entry>
-    <title>HSEA note</title>
-    <url>/2021/09/13/HSEA_note/</url>
-    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
-<ul>
-<li>initial state (what about state space?)</li>
-<li>actions</li>
-<li>transition model</li>
-<li>foal test</li>
-<li>path cost</li>
-</ul>
-<p>Solution: a path</p>
-<hr>
-<p><strong>complexity</strong></p>
-]]></content>
-      <categories>
-        <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
     <title>DSPC note</title>
     <url>/2021/09/26/PC_note/</url>
     <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
@@ -379,23 +360,6 @@
       </categories>
   </entry>
   <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
-<hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
-      </categories>
-  </entry>
-  <entry>
     <title>戴小姐披萨店</title>
     <url>/2021/10/03/daixiaojie/</url>
     <content><![CDATA[<p>2021.10.3</p>
@@ -414,6 +378,42 @@
 ]]></content>
       <categories>
         <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HSEA note</title>
+    <url>/2021/09/13/HSEA_note/</url>
+    <content><![CDATA[<h1 id="Lecture-1"><a href="#Lecture-1" class="headerlink" title="Lecture 1"></a>Lecture 1</h1><p>A search problem</p>
+<ul>
+<li>initial state (what about state space?)</li>
+<li>actions</li>
+<li>transition model</li>
+<li>foal test</li>
+<li>path cost</li>
+</ul>
+<p>Solution: a path</p>
+<hr>
+<p><strong>complexity</strong></p>
+]]></content>
+      <categories>
+        <category>lecture notes</category>
       </categories>
   </entry>
   <entry>
@@ -608,7 +608,7 @@
 <h4 id="平板"><a href="#平板" class="headerlink" title="平板"></a>平板</h4><ul>
 <li><p>打开 <a href="https://www.zerotier.com/download/">https://www.zerotier.com/download/</a> 下载 Android 的 ZeroTier, 打开, ADD NETWORK, 输入 Network ID, Add Network. 回到网页, Members 处勾选 Auth?, 至此游戏本与平板都连接到同一个 “Network” 内. 若游戏本与平板不连接同一个 WIFI, 需要打开 ZeroTier 的开关以打开 VPN, 否则不需要.</p>
 </li>
-<li><p>打开 <a href="https://github.com/moonlight-stream/moonlight-android/releases">https://github.com/moonlight-stream/moonlight-android/releases</a>, 下载 app-nonRoot-release.apk 并安装, 打开, 可以看到游戏本的带锁标识, 点击, 弹出验证码, 于游戏本输入, 成功串流.</p>
+<li><p>打开 <a href="https://github.com/moonlight-stream/moonlight-android/releases">https://github.com/moonlight-stream/moonlight-android/releases</a>, 下载 app-nonRoot-release.apk 并安装, 打开, 可以看到游戏本的带锁标识, 点击, 弹出验证码, 于游戏本输入, 成功串流. 对于日常使用而言, 串流延迟完全可以接受, 云游戏可能不太行. 续航情况尚在测试.</p>
 </li>
 </ul>
 <center><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/22012404.jpg" style="zoom: 12%;" /></center>
