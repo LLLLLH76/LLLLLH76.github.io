@@ -71,7 +71,7 @@
 <li>B, Bridge, 存储器总线和I/O总线间的接口</li>
 <li>DIR, Cache Directory, 高速缓存目录</li>
 <li>IOB, IO Bus, I/O 总线</li>
-<li>LD, Local Dosk, 本地磁盘</li>
+<li>LD, Local Disk, 本地磁盘</li>
 <li>MB, Memory Bus, 存储器总线</li>
 <li>NIC, Network Interface Circuitry, 网络接口电路</li>
 <li>P/C, Microprocessor and Cache, 微处理器和高速缓存</li>
@@ -153,6 +153,7 @@
 </ul>
 </li>
 </ul>
+<p><img src="C:\Users\xxx\AppData\Roaming\Typora\typora-user-images\image-20220104210105968.png" alt="image-20220104210105968"></p>
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="静态互连网络"><a href="#静态互连网络" class="headerlink" title="静态互连网络"></a>静态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093008.png" style="zoom: 80%;" /></p>
 <h3 id="动态互连网络"><a href="#动态互连网络" class="headerlink" title="动态互连网络"></a>动态互连网络</h3><p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/main/2021093009.png" style="zoom: 80%;" /></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>第一章</p>
@@ -366,26 +367,15 @@
 <p>计算由一系列用全局同步分开, 周期为 L 的超级步组成</p>
 <p>各超级步中每个处理器执行局部计算, 并通过选路器接发信息. 然后作一全局检查看是否所有处理器都已完成.</p>
 <p>分布存储的 MIMD</p>
+<hr>
+<p>选择题, 填空题, 简答题, 问答题</p>
+<p>70~80% 为算法题: PPT案例, 改变输入</p>
+<p>其余为概念题</p>
+<p>1~8章 + map-reduce</p>
+<p>6: 对数划分不考</p>
 ]]></content>
       <categories>
         <category>lecture notes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>双系统配置</title>
-    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
-    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
-<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
-<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
-<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
-<p>完成后关机.</p>
-<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
-<hr>
-<p>不想搞了, 用SSH连组里的服务器了.</p>
-]]></content>
-      <categories>
-        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -407,6 +397,23 @@
 ]]></content>
       <categories>
         <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>双系统配置</title>
+    <url>/2021/09/14/Window10+Ubuntu18.04configuration/</url>
+    <content><![CDATA[<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><h3 id="下载-Ubuntu-18-04-镜像文件"><a href="#下载-Ubuntu-18-04-镜像文件" class="headerlink" title="下载 Ubuntu 18.04 镜像文件"></a>下载 Ubuntu 18.04 镜像文件</h3><p>打开 <a href="https://old-releases.ubuntu.com/releases/18.04/">Ubuntu 官网</a>, 点击下载 <code>ubuntu-18.04-desktop-amd64.iso</code></p>
+<h3 id="准备磁盘空间"><a href="#准备磁盘空间" class="headerlink" title="准备磁盘空间"></a>准备磁盘空间</h3><p>右键 ‘开始’, 点击 ‘磁盘管理’, 通过对C/D盘等 ‘压缩卷’ 获得至少 40 GB 的 ‘未分配’ 空间.</p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021100305.jpg" style="zoom:10%;" /></p>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><p>插入 U 盘.</p>
+<p>下载安装打开 <a href="https://cn.ultraiso.net/xiazai.html">ultraISO</a>, 点击 ‘文件’, 打开 <code>ubuntu-18.04-desktop-amd64.iso</code>, 点击 ‘启动’, ‘写入硬盘映像’, 点击 ‘写入’.</p>
+<p>完成后关机.</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>…</p>
+<hr>
+<p>不想搞了, 用SSH连组里的服务器了.</p>
+]]></content>
+      <categories>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -495,11 +502,11 @@
 </tr>
 <tr>
 <td style="text-align:center">无线耳机</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">U盘</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">电脑</td>
@@ -511,11 +518,11 @@
 </tr>
 <tr>
 <td style="text-align:center">鼠标</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">鼠标垫</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">耳机</td>
@@ -527,7 +534,7 @@
 </tr>
 <tr>
 <td style="text-align:center">充电宝</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">键盘</td>
@@ -547,7 +554,7 @@
 </tr>
 <tr>
 <td style="text-align:center">月饼</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td style="text-align:center">衣服</td>
@@ -613,6 +620,43 @@
 ]]></content>
       <categories>
         <category>Restaurants</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>告别练功生涯</title>
+    <url>/2022/01/24/session/</url>
+    <content><![CDATA[<p>2022.1.24</p>
+<p>对于一个臭打游戏的大学生, 每天背着 <strong>5 斤</strong>左右的游戏本+充电器来回教室与宿舍, 不在插座旁边就活不下去的日子是不好受的. 如果能把游戏本放在宿舍, 只携带显示器与键鼠在教室远程操控电脑就好了.</p>
+<p>经过学习网上资料, 笔者成功实现了这一方案.</p>
+<h3 id="购置平板电脑"><a href="#购置平板电脑" class="headerlink" title="购置平板电脑"></a>购置平板电脑</h3><p>平板电脑可以很好充当显示器的角色, 它的优点有轻便, 续航较强, 可以串流, 价格可以不高 (后两点与便携式显示器对比).</p>
+<p>同时, 平板只需承担串流 (播放游戏本实时画面) 的负载, 对性能的要求不高, 可以砍预算. 它只要大概满足续航强, 轻便, 屏幕素质和游戏本差不多即可.</p>
+<p>最后笔者摸了摸自己薄薄的钱包, 以 879 元的价格拿下了大厂平板中最便宜的一款: 联想小新 pad 4+64. 相比于两千到上万不等的 ipad, matepad 等平板, 小新 pad 确实只是个弟弟, 但它能串流, 只有 <strong>1 斤</strong>, 有7700mAh的电量, 有着比15.6英寸游戏本略小的11英寸, 2000*1200 的”2k” 屏, 已经可以满足笔者的需求.</p>
+<center><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/22012401.jpg" style="zoom: 11%;" /></center>
+
+<center><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/22012402.jpg" style="zoom: 11%;" /></center>
+
+<h3 id="配置软件"><a href="#配置软件" class="headerlink" title="配置软件"></a>配置软件</h3><h4 id="游戏本"><a href="#游戏本" class="headerlink" title="游戏本"></a>游戏本</h4><ul>
+<li>需要有 N 卡, 安装 Geforce Experience, 在”设置”-&gt;”SHIELD” 中打开 GAMESTREAM, 点击”添加”, 选取C:\Windows\System32\mstsc.exe</li>
+<li>打开 <a href="https://my.zerotier.com/network">https://my.zerotier.com/network</a>, 注册账号, create a network, 记住 Network ID 并保密, Name 处命名, Access Control 选择 PRIVATE, IPv4 Auto-Assign 选择 10.147.17.*. 打开 Download, 下载 Windows 的 ZeroTier, 打开 Control Panel, 输入 Network ID, Join Network. 回到网页, Members 处勾选 Auth?</li>
+</ul>
+<h4 id="平板"><a href="#平板" class="headerlink" title="平板"></a>平板</h4><ul>
+<li><p>打开 <a href="https://www.zerotier.com/download/">https://www.zerotier.com/download/</a> 下载 Android 的 ZeroTier, 打开, ADD NETWORK, 输入 Network ID, Add Network. 回到网页, Members 处勾选 Auth?, 至此游戏本与平板都连接到同一个 “Network” 内. 若游戏本与平板不连接同一个 WIFI, 需要打开 ZeroTier 的开关以打开 VPN, 否则不需要.</p>
+</li>
+<li><p>打开 <a href="https://github.com/moonlight-stream/moonlight-android/releases">https://github.com/moonlight-stream/moonlight-android/releases</a>, 下载 app-nonRoot-release.apk 并安装, 打开, 可以看到游戏本的带锁标识, 点击, 弹出验证码, 于游戏本输入, 成功串流.</p>
+</li>
+</ul>
+<center><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/22012404.jpg" style="zoom: 12%;" /></center>
+
+<center><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/22012403.jpg" style="zoom: 12%;" /></center>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>串流信号 (视频) 分辨率为游戏本主屏幕的分辨率 a, 如果与平板的分辨率 b 一致, 最好; 如果分辨率 a &gt; 分辨率 b, 也挺好, 可以在游戏本打开 NVIDIA Control Panel, 自定义出分辨率 b; 如果分辨率 a &lt; 分辨率 b, 平板会有黑边或需要拉伸画面, NVIDIA Control Panel 也无法自定义出分辨率 b, 这时需要购买 HDMI 欺骗器, 需要骗出分辨率 b 以上的分辨率, 再用NVIDIA Control Panel 自定义出分辨率 b, 再到平板 moonlight 设置响应分辨率, 就可以 100% 利用平板屏幕了.</li>
+<li>平板 879, 无线键盘 37, 保护套 27, 支架 27, 欺骗器 5, 数据线转type-c 2, 方案总计花费 977 元.</li>
+<li>除了平板, 安卓手机也可以用相同方法实现串流. 手机屏幕虽小, 却也有妙用: VR. 眼镜还在路上, 功能尚在开发, 敬请期待.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>configuration</category>
       </categories>
   </entry>
   <entry>
@@ -798,8 +842,8 @@
 <p>$a_0 \frac{d^n}{dt^n}y(t) + a_1 \frac{d^{n-1}}{dt^{n-1}}y(t) + \cdots + a_{n-1} \frac{d^{}}{dt^{}}y(t) + a_n y_t = b_0 \frac{d^m}{dt^m}r(t) + b_1 \frac{d^{m-1}}{dt^{m-1}}r(t) + \cdots + b_{m-1} \frac{d^{}}{dt^{}}r(t) + b_m r_t $​</p>
 <p>建立线性化近似模型策略:</p>
 <ol>
-<li>限制范围, 使系统工作在线性区, 忽略非线性. $y = \frac{dy}{dx}|_{x_0} x$​</li>
-<li>小信号 : 泰勒展开</li>
+<li>限制范围, 使系统工作在线性区, 忽略非线性. $y = (\frac{dy}{dx}|_{x_0})\cdot x$</li>
+<li>小信号 : 泰勒展开. $\Delta y = (\frac{dy}{dx}|_{x_0})\cdot \Delta x$</li>
 </ol>
 <hr>
 <p>时间域 $f(t)$ —&gt; 傅立叶变换  —&gt; 频率域 $F(\omega)$​ —&gt; 傅立叶反变换 —&gt; $f(t)$​</p>
@@ -839,7 +883,7 @@
 </ul>
 </li>
 <li><strong>终值定理</strong><ul>
-<li>$\lim\limits_{t\rightarrow\infty} = \lim_\limits{s\rightarrow0}sF(s)$</li>
+<li>$\lim\limits_{t\rightarrow\infty} f(t)= \lim_\limits{s\rightarrow0}sF(s)$</li>
 </ul>
 </li>
 <li>初值定理<ul>
@@ -875,9 +919,6 @@
 <p>$n \ge m$, 系数均为实数</p>
 <p>放大系数(增益): $G(0) = \frac{b_m}{a_n} = K$</p>
 <p>$N(s) = 0$ 称为系统的特征方程, 其根为系统的特征根, $s$ 的最高阶次等于系统的阶次</p>
-<h2 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h2><h3 id="2-6"><a href="#2-6" class="headerlink" title="2-6"></a>2-6</h3><p>(a) $r(t)$ 为单位阶跃函数, $R(s) = L(r(t)) = \frac{1}{s}, Y(s) = \frac{4(s+50)}{s(s^2 + 30s + 200)} = \frac{1}{s} - \frac{8}{5} \frac{1}{s+10} + \frac{3}{5}\frac{1}{s+20}$</p>
-<p>​     $y(t) = L^{-1}(Y(s)) = 1 - \frac{8}{5} e^{-10t} + \frac{3}{5} e^{-20t}$</p>
-<p>(b) 由题意 $\lim_{t\rightarrow \infty} y(t)$​ 存在, $y(t)$​ 存在拉氏变换</p>
 <h1 id="Lecture-X"><a href="#Lecture-X" class="headerlink" title="Lecture X"></a>Lecture X</h1><p>二阶系统的时域响应性能分析</p>
 <p>$G(s)=\frac{\omega_n^2}{s(s+2\zeta\omega_n)},~H(s)=1$</p>
 <p>$\Phi(s) = \frac{G}{1+GH} = \frac{\omega_n^2}{s^2 + 2\zeta \omega_ns+\omega_n^2}$</p>
@@ -943,15 +984,15 @@
 </li>
 <li><p>上升时间 $t_r$: 令 $\sin = 0$ 得 $t_r = \frac{\pi-\beta}{\omega_d}$ </p>
 </li>
-<li><p>峰值时间 $t_p$: 令 $\frac{dy(t)}{dt}=0$ 得 $\tan(\omega_dt+\beta) = \frac{\omega_d}{\zeta\omega_n} = \tan(\beta)~\Rightarrow ~\omega_dt_p=n\pi=\pi$ 得 $t_p = \frac{\pi}{\omega_d}$</p>
+<li><p>峰值时间 $t_p$: 令 $\frac{dy(t)}{dt}=0$ 得 $\tan(\omega_dt+\beta) = \frac{\omega_d}{\zeta\omega_n} = \tan(\beta)~\Rightarrow ~\omega_dt_p=n\pi=\pi$ 得 $t_p = \frac{\pi}{\omega_d} = \pi$ / 虚部</p>
 </li>
 <li><p>超调量 P.O. $y(t_p) = 1+e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}},~y(\infty)=1,~P.O.=e^{-\frac{\zeta\pi}{\sqrt{1-\zeta^2}}} \cdot 100\%$, <strong>由$\zeta$唯一决定</strong></p>
-<p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
+<p>  |    $\zeta$  |  P.O.    |  实虚比例    |<br>  | :——: | :——: | :——: |<br>  | 0.707 = $\sqrt{2}/2$ | &lt;5% | 1:1 |<br>  | 0.6 | &lt;10% | 3:4 |<br>  | 0.45 | $\approx$20% | 1:2 |<br>  | 0.32 | &lt;35% | 1:3 |</p>
 </li>
 <li><p>调节时间 $t_s$: 令 $\frac{e^{-\zeta\omega_nt_s}}{\sqrt{1-\zeta^2}} =\delta$ 得 $t_s \approx \frac{-\ln\delta}{\zeta\omega_n}$</p>
 <ul>
-<li>5% 准则, $\delta=5\%,~t_s\approx3T$</li>
-<li>2% 准则, $\delta=2\%,~t_s\approx4T$</li>
+<li>5% 准则, $\delta=5\%,~t_s\approx3T = 3$ / 实部</li>
+<li>2% 准则, $\delta=2\%,~t_s\approx4T= 4$ / 实部</li>
 <li>若精确计算, 当 $\omega_n$ 一定, $\zeta=0.707~(\beta = \pi/2)$ 时 $t_s$ 最小. $\zeta$ 一定时, 固有频率 $\omega_n$ 越大则 $t_s$ 越小.</li>
 </ul>
 </li>
@@ -997,7 +1038,7 @@
 <ul>
 <li><p>忽略非主导极点</p>
 <p>主导极点: 靠近虚轴且附近没有零点的极点, 实部为 $\zeta\omega_n$</p>
-<p>可以忽略实部为 $N\zeta\omega_n~(N\ge0)$ 的远端极点</p>
+<p>可以忽略实部为 $N\zeta\omega_n~(N\ge 10)$ 的远端极点</p>
 </li>
 <li><p>偶极子相消</p>
 <p>一极点与一零点之间的距离 &lt; 它们本身到原点距离的 1/10, 可以消掉 (太阳是原点, 消掉海王星及其卫星)</p>
@@ -1116,7 +1157,7 @@
 <h2 id="劳斯-赫尔维茨稳定性判据"><a href="#劳斯-赫尔维茨稳定性判据" class="headerlink" title="劳斯-赫尔维茨稳定性判据"></a>劳斯-赫尔维茨稳定性判据</h2><p>系统的特征多项式: 闭环传递函数的分母 $q(s) = a_{n}s^{n} + a_{n-1}s^{n-1}+\cdots a_{1}s^{} + a_0$</p>
 <p>闭环系统稳定充要条件:</p>
 <ul>
-<li>$a_i &gt; 0$</li>
+<li>$a_i &gt; 0$, 记得记得记得</li>
 <li>劳斯判定表中第一列均为正</li>
 </ul>
 <p>劳斯判定表: 一撇减一捺, 除以左下角</p>
@@ -1130,22 +1171,176 @@
 <li>全零行, 前一行多项式是 $q(s)$ 的因子, 提取计算</li>
 </ul>
 <h1 id="Lecture-X-3"><a href="#Lecture-X-3" class="headerlink" title="Lecture X+3"></a>Lecture X+3</h1><p>根轨迹图: 以增益 $K$ 为变量, 当 $K:0\rightarrow \infty$, 系统闭环<strong>极点</strong>在 $S$ 平面上变化的轨迹.</p>
-<p>闭环传递函数 = $\frac{KG(s)}{1 + KG(s)H(s)}$</p>
+<p><strong>闭环</strong>传递函数 = $\frac{KG(s)}{1 + KG(s)H(s)}$</p>
 <p>特征方程 (分母=0): $1 + KG(s)H(s) = 0$</p>
-<p>其中 $KG(s)H(s) = \frac{K(s+z_1)(s+z_2)…}{(s+p_1)(s+p_2)…}$</p>
-<p>eg. $KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s+0.5)}$</p>
+<p>特征方程中 $s$ 的最高阶次 = 系统阶次</p>
+<p><strong>开环</strong>传递函数 $KG(s)H(s) = \frac{K(s+z_1)(s+z_2)…}{(s+p_1)(s+p_2)…}$</p>
+<p>eg. $KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s-0.5)}$</p>
 <p>验证 $-1.09\pm j 2.07$ 在根轨迹上:</p>
 <ul>
 <li><p>相角条件: 判断在不在</p>
 <p>$+(92.49\degree)-(66.27\degree+78.8\degree+127.53\degree) = -180\degree=180\degree+k360\degree(k=0,\pm1,\pm2…)$</p>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021112301.png" style="zoom: 50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/LLLLLH76/blog-img/master/2021112302.png" style="zoom: 50%;" /></p>
 <ul>
 <li><p>幅值条件: 计算此时的 $K$</p>
-<p>$KG(s)H(s) = \frac{K(s+1)}{(s+2)(s+1.5)(s+0.5)}$</p>
+<p>$|KG(s)H(s)| = \frac{K|s+1|}{|s+2||s+1.5||s-0.5|} = \frac{K|s-(-1)|}{|s-(-2)||s-(-1.5)||s-0.5|} =\frac{K<em>2.072}{2.26</em>2.11*2.61} = 1$ 得 $K = 6.0068$</p>
 </li>
 </ul>
+<hr>
+<p>$N$ 阶系统</p>
+<p> $\leftrightarrow$ 特征方程(传递函数分母) $s$ 次数为 $N$</p>
+<p> $\leftrightarrow$ 有 $N$ 个极点</p>
+<p> $\leftrightarrow$ 根轨迹有 $N$ 个分支</p>
+<p>而闭环极点为实根/共轭复根, 因此根轨迹关于实轴对称.</p>
+<ul>
+<li>起点: $K\rightarrow0$, 由特征方程得 $(s+p_1)(s+p_2)…=0$, 即起点为极点 pole, x 出</li>
+<li><p>终点: $K\rightarrow\infty$, 由特征方程得 $(s+z_1)(s+z_2)…$, 即起点为零点 zero,       o 入</p>
+</li>
+<li><p>然而 $n$ 个极点, $m$ 个零点, 会有 $n-m$ 条轨迹飞向远方 (无限零点).</p>
+</li>
+</ul>
+<h2 id="画根轨迹草图"><a href="#画根轨迹草图" class="headerlink" title="画根轨迹草图"></a>画根轨迹草图</h2><h3 id="1-零极点"><a href="#1-零极点" class="headerlink" title="1 零极点"></a>1 零极点</h3><p>由开环传递函数 $KGH$ 得到.</p>
+<h3 id="2-实轴轨迹"><a href="#2-实轴轨迹" class="headerlink" title="2 实轴轨迹"></a>2 实轴轨迹</h3><p>实轴上<strong>右侧</strong>开环零, 极点个数为<strong>奇数</strong>的段.</p>
+<h3 id="3-分离点与会合点"><a href="#3-分离点与会合点" class="headerlink" title="3 分离点与会合点"></a>3 分离点与会合点</h3><p>$KG(s)H(s) = \frac{K(s+z_1)(s+z_2)…}{(s+p_1)(s+p_2)…} = -1$</p>
+<p>$K = -\frac{Q(s)}{P(s)} =-\frac{(s+p_1)(s+p_2)…}{(s+z_1)(s+z_2)…} $</p>
+<p>由 $\frac{dK}{ds}=0$ 求出 $K$ 关于 $s$ 的极值点, 代入特征方程以舍去使 $K&lt;0$ 的 $s$ 值. </p>
+<p>极大值为分离点, 极小值为会合点.</p>
+<h3 id="4-渐近线"><a href="#4-渐近线" class="headerlink" title="4 渐近线"></a>4 渐近线</h3><p>有 $n-m$ 个无限零点, $n-m$ 条渐近线</p>
+<ul>
+<li>确定渐近线与实轴交点 (渐进中心) : $\frac{\Sigma(-p) - \Sigma(-z)}{n-m} = \frac{极点之和-零点之和}{n-m}$</li>
+<li>由渐进中心”射出” $n-m$ 条渐近线, 与实轴夹角为 $\frac{180\degree}{n-m},~\frac{180\degree + 360\degree}{n-m},~\frac{180\degree + 720\degree}{n-m},~…$ 平分 $S$ 平面<ul>
+<li>$n-m=1:~180$</li>
+<li>$n-m = 2:~90, 270$</li>
+<li>$n-m = 3:~60, 180, 300$</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-出射角和入射角"><a href="#5-出射角和入射角" class="headerlink" title="5 出射角和入射角"></a>5 出射角和入射角</h3><ul>
+<li>出射角 $= (2k+1)\pi + $ 与所有零点相角之和 - 与其他极点相角之和</li>
+<li>入射角 $= (2k+1)\pi + $ 与所有极点相角之和 - 与其他零点相角之和</li>
+</ul>
+<h3 id="6-虚轴交点"><a href="#6-虚轴交点" class="headerlink" title="6 虚轴交点"></a>6 虚轴交点</h3><ul>
+<li><p>法一: 特征方程</p>
+<p>$1 + KG(j\omega)H(j\omega) = 0$, 即方程左边实部虚部都为0, 求出 $\omega,~K$</p>
+</li>
+<li><p>法二: 劳斯判据</p>
+<p>求出临界稳定的 $K$ 值, 再代入特征方程求得交点 $j\omega$</p>
+</li>
+</ul>
+<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><p>1 2 5 6 7 3 11</p>
+<p>拉氏变换的五大性质的证明不考</p>
+<p>梅森公式不考</p>
+<p>调节时间等时间不用记具体的式子, 只要记常见的设定</p>
+<h1 id="死记硬背"><a href="#死记硬背" class="headerlink" title="死记硬背"></a>死记硬背</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li><p>自动控制: 无人参与情况下, 使受控对象产生预期响应.</p>
+</li>
+<li><p>控制理论研究两类问题</p>
+<ul>
+<li>性能分析</li>
+<li>综合与校正</li>
+</ul>
+</li>
+<li><p>经典控制理论采用的数学模型以<strong>传递函数</strong>为基础</p>
+</li>
+<li><p>现代控制理论采用的数学模型以<strong>状态空间方程</strong>为基础</p>
+</li>
+<li><p><strong>微分方程</strong>是列写传递函数和状态空间方程的基础</p>
+</li>
+<li><p>传递函数因子/环节</p>
+<ul>
+<li><p>比例 $K$: 输出量按一定比例复现输入量，无滞后、失真现象</p>
+</li>
+<li><p>比例微分 $\tau s +1$: 动态过程中，输出量不仅与输入量本身有关， 而且与输入量的变化率有关</p>
+</li>
+<li><p>二阶微分 $\tau^2 s^2 + 2\zeta\tau s+1$: 动态过程中，输出与输入及其一、二阶导数 都有关</p>
+</li>
+<li><p>积分 $\frac{1}{Ts}$: 输出量取决于输入量对时间的积累过程。且具有记忆功能. 具有明显的滞后作用, 输出量须经过时间 T 才能达到输入量在t = 0 时的值 A</p>
+</li>
+<li><p>一阶惯性 $\frac{K}{Ts + 1}$: 动态过程中，输出不能立即复现输入，存在 时间上的延迟</p>
+</li>
+<li><p>二阶振荡 $\frac{K}{T^2s^2 + 2\zeta T s+1}$: 动态过程中，输出不能立即 复现输入，输出带有振荡的性质</p>
+</li>
+<li><p>延迟: 从输入开始之初，在0 ~ τ 时间内，没有输出， 但 t=τ 之后，输出完全等于输入</p>
+</li>
+</ul>
+</li>
+<li><p>框图模型: 描述系统及各组成部件之间信号传递关系的 图示化模型</p>
+<ul>
+<li>信号线</li>
+<li>信号引出点</li>
+<li>函数方框</li>
+<li>比较点</li>
+</ul>
+</li>
+<li><p>减小误差</p>
+<ul>
+<li>减小输入引起的稳态误差<ul>
+<li>增大开环放大倍数</li>
+<li>提高系统型次</li>
+</ul>
+</li>
+<li>减小干扰带来的稳态误差<ul>
+<li>增大干扰点前放大倍数</li>
+<li>在干扰点前加积分器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><img src="C:\Users\xxx\AppData\Roaming\Typora\typora-user-images\image-20220102214024066.png" alt="image-20220102214024066"></p>
+</li>
+<li><p>微分型增加开环零点: 增加合适的开环零点，可以使根轨 迹产生向左弯曲的倾向，有利于提 高系统稳定性和阻尼系数</p>
+</li>
+<li><p>积分型增加开环极点: 增加开环极点，将使根轨迹产生向 右弯曲的倾向。这不利于系统稳定 性，但有利于稳态精度。</p>
+</li>
+<li><p>综合型增加开环零极点</p>
+</li>
+<li><p>|              | PO   | $t_s$ | 稳态误差 | 稳定性 |<br>  | —————— | —— | ——- | ———— | ———— |<br>  | 增大比例系数 | 大 | 不变 | 小 | 不变 |<br>  | 增大纯微分系数 | 过阻尼 | 大 | 不变 | 差 |<br>  | 增大纯积分系数 | 大 | 大 | 型次变大, 小 | 差 |</p>
+<p>  <img src="C:\Users\xxx\AppData\Roaming\Typora\typora-user-images\image-20220102214518590.png" alt="image-20220102214518590"></p>
+</li>
+<li><p>经典控制理论采用传递函数描述对象的输入、输出 关系。</p>
+</li>
+<li><p>状态空间方法采用系统状态描述系统内部运行 的基本规律。</p>
+</li>
+<li><p>系统状态是指表示系统的一组变量，只要知道了这组变量 当前取值情况、输入信号和描述系统动态特性的方程，就 能够完全确定系统未来的状态和输出响应。</p>
+</li>
+<li><p>状态空间: 以各状态变量x1(t), x2 (t), …, xn(t)为坐标轴所构 成的n维空间。</p>
+</li>
+</ul>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><ul>
+<li>典型函数拉氏变换</li>
+<li>拉氏变换性质</li>
+<li>闭环传递函数 G1G2, 偏差传递函数 1, 干扰传递函数 G2, 干扰偏差传递函数 -G2H, 干扰引起的误差 $\frac{-G_2}{1+G_1G_2H}N(s)$</li>
+<li>静态位置/速度/加速度误差系数 $K_p, K_v, K_a$</li>
+<li><img src="C:\Users\xxx\AppData\Roaming\Typora\typora-user-images\image-20220102214921488.png" alt="image-20220102214921488"></li>
+<li>阿克曼公式<ul>
+<li>$K = [0, 0, 1]P_c^{-1}q(A)$</li>
+<li>$L = p(A)P_o^{-1}[0,0,1]^T$</li>
+</ul>
+</li>
+</ul>
+<h2 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h2><p>ployval 求多项式值</p>
+<p>roots 求根</p>
+<p>poly 重构多项式</p>
+<p>tf, zero, pole pzmap</p>
+<p>zpk</p>
+<p>tf2zp, zp2tf</p>
+<p>conv 多项式相乘</p>
+<p>series, parallel, feedback, cloop</p>
+<p>residue 部分分式展开</p>
+<p>minreal 零极点对消</p>
+<p>step 绘制单位阶跃响应曲线</p>
+<p>impulse 绘制单位脉冲响应曲线</p>
+<p>lsim 绘制任意输入响应曲线</p>
+<p>rlocus 画根轨迹</p>
+<p>rlocfind</p>
+<p>sisotool</p>
+<p>ss tf</p>
+<p>expm</p>
+<p>ctrb</p>
+<p>obsv</p>
+<p>acker</p>
 ]]></content>
       <categories>
         <category>lecture notes</category>
